@@ -35,7 +35,7 @@
 
 #include <uORB/Subscription.hpp>
 
-#include <lib/atmosphere/atmosphere.h>
+#include <lib/geo/geo.h>
 #include <lib/mathlib/mathlib.h>
 
 #include <px4_platform_common/getopt.h>
@@ -68,8 +68,9 @@ GZBridge::~GZBridge()
 
 int GZBridge::init()
 {
-	if (!_model_sim.empty()) {
+	std::string model_name_no_nesting = model_name_trim_nesting();
 
+	if (!_model_sim.empty()) {
 		// service call to create model
 		gz::msgs::EntityFactory req{};
 		req.set_sdf_filename(_model_sim + "/model.sdf");
@@ -95,12 +96,6 @@ int GZBridge::init()
 				model_pose_v.push_back(0.0);
 			}
 
-			// If model position z is less equal than 0, move above floor to prevent floor glitching
-			if (model_pose_v[2] <= 0.0) {
-				PX4_INFO("Model position z is less or equal 0.0, moving upwards");
-				model_pose_v[2] = 0.5;
-			}
-
 			gz::msgs::Pose *p = req.mutable_pose();
 			gz::msgs::Vector3d *position = p->mutable_position();
 			position->set_x(model_pose_v[0]);
@@ -122,44 +117,15 @@ int GZBridge::init()
 		bool result;
 		std::string create_service = "/world/" + _world_name + "/create";
 
-		bool gz_called = false;
-		// Check if PX4_GZ_STANDALONE has been set.
-		char *standalone_val = std::getenv("PX4_GZ_STANDALONE");
-
-		if ((standalone_val != nullptr) && (std::strcmp(standalone_val, "1") == 0)) {
-			// Check if Gazebo has been called and if not attempt to reconnect.
-			while (gz_called == false) {
-				if (_node.Request(create_service, req, 1000, rep, result)) {
-					if (!rep.data() || !result) {
-						PX4_ERR("EntityFactory service call failed");
-						return PX4_ERROR;
-
-					} else {
-						gz_called = true;
-					}
-				}
-
-				// If Gazebo has not been called, wait 2 seconds and try again.
-				else {
-					PX4_WARN("Service call timed out as Gazebo has not been detected.");
-					system_usleep(2000000);
-				}
-			}
-		}
-
-
-		// If PX4_GZ_STANDALONE has been set, you can try to connect but GZ_SIM_RESOURCE_PATH needs to be set correctly to work.
-		else {
-			if (_node.Request(create_service, req, 1000, rep, result)) {
-				if (!rep.data() || !result) {
-					PX4_ERR("EntityFactory service call failed.");
-					return PX4_ERROR;
-				}
-
-			} else {
-				PX4_ERR("Service call timed out. Check GZ_SIM_RESOURCE_PATH is set correctly.");
+		if (_node.Request(create_service, req, 1000, rep, result)) {
+			if (!rep.data() || !result) {
+				PX4_ERR("EntityFactory service call failed");
 				return PX4_ERROR;
 			}
+
+		} else {
+			PX4_ERR("Service call timed out");
+			return PX4_ERROR;
 		}
 	}
 
@@ -216,18 +182,13 @@ int GZBridge::init()
 		return PX4_ERROR;
 	}
 
-	if (!_mixing_interface_esc.init(_model_name)) {
+	if (!_mixing_interface_esc.init(model_name_no_nesting)) {
 		PX4_ERR("failed to init ESC output");
 		return PX4_ERROR;
 	}
 
-	if (!_mixing_interface_servo.init(_model_name)) {
+	if (!_mixing_interface_servo.init(model_name_no_nesting)) {
 		PX4_ERR("failed to init servo output");
-		return PX4_ERROR;
-	}
-
-	if (!_mixing_interface_wheel.init(_model_name)) {
-		PX4_ERR("failed to init motor output");
 		return PX4_ERROR;
 	}
 
@@ -428,7 +389,7 @@ void GZBridge::airspeedCallback(const gz::msgs::AirSpeedSensor &air_speed)
 	report.timestamp_sample = time_us;
 	report.device_id = 1377548; // 1377548: DRV_DIFF_PRESS_DEVTYPE_SIM, BUS: 1, ADDR: 5, TYPE: SIMULATION
 	report.differential_pressure_pa = static_cast<float>(air_speed_value); // hPa to Pa;
-	report.temperature = static_cast<float>(air_speed.temperature()) + atmosphere::kAbsoluteNullCelsius; // K to C
+	report.temperature = static_cast<float>(air_speed.temperature()) + CONSTANTS_ABSOLUTE_NULL_CELSIUS; // K to C
 	report.timestamp = hrt_absolute_time();;
 	_differential_pressure_pub.publish(report);
 
@@ -511,8 +472,10 @@ void GZBridge::poseInfoCallback(const gz::msgs::Pose_V &pose)
 
 	pthread_mutex_lock(&_node_mutex);
 
+	std::string model_name_no_nesting = model_name_trim_nesting();
+
 	for (int p = 0; p < pose.pose_size(); p++) {
-		if (pose.pose(p).name() == _model_name) {
+		if (pose.pose(p).name() == model_name_no_nesting) {
 
 			const uint64_t time_us = (pose.header().stamp().sec() * 1000000) + (pose.header().stamp().nsec() / 1000);
 
@@ -729,7 +692,6 @@ void GZBridge::Run()
 
 		_mixing_interface_esc.stop();
 		_mixing_interface_servo.stop();
-		_mixing_interface_wheel.stop();
 
 		exit_and_cleanup();
 		return;
@@ -745,7 +707,6 @@ void GZBridge::Run()
 
 		_mixing_interface_esc.updateParams();
 		_mixing_interface_servo.updateParams();
-		_mixing_interface_wheel.updateParams();
 	}
 
 	ScheduleDelayed(10_ms);
@@ -760,9 +721,6 @@ int GZBridge::print_status()
 
 	PX4_INFO_RAW("Servo outputs:\n");
 	_mixing_interface_servo.mixingOutput().printStatus();
-
-	PX4_INFO_RAW("Wheel outputs:\n");
-	_mixing_interface_wheel.mixingOutput().printStatus();
 
 	return 0;
 }
@@ -794,6 +752,20 @@ int GZBridge::print_usage(const char *reason)
 	PRINT_MODULE_USAGE_DEFAULT_COMMANDS();
 
 	return 0;
+}
+
+std::string GZBridge::model_name_trim_nesting()
+{
+	int ind_slash = _model_name.find_last_of("/");
+	std::string model_name_no_nesting = "";
+
+	if(ind_slash >= 0){
+		model_name_no_nesting = _model_name.substr(ind_slash+1, _model_name.length());
+	}else{
+		model_name_no_nesting = _model_name;
+	}
+
+	return model_name_no_nesting;
 }
 
 extern "C" __EXPORT int gz_bridge_main(int argc, char *argv[])
