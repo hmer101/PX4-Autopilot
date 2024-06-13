@@ -30,7 +30,8 @@ import os
 #include <uORB/topics/@(include).h>
 @[end for]@
 
-#define UXRCE_DEFAULT_POLL_RATE 10
+#define UXRCE_DEFAULT_POLL_RATE 25
+//Orig: 10 - minimum number of ms before next polling i.e. 1/0.01 = 100 Hz
 
 typedef bool (*UcdrSerializeMethod)(const void* data, ucdrBuffer& buf, int64_t time_offset);
 
