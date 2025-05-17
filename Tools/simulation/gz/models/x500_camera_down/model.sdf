@@ -9,16 +9,17 @@
     </include>
 
     <!-- Camera -->
-    <include merge='true'>
+    <!-- <include merge='true'>
       <uri>OakD-Lite</uri> 
-      <pose relative_to="base_link">.09 .03 -.025 0.0 1.0472 0</pose> <!-- -.10 -.03 -.025 0.0 1.0472 3.141592654-->
+      <pose relative_to="base_link">.09 .03 -.025 0.0 1.0472 0</pose> 
     </include>
 
     <joint name="camera_joint" type="fixed">
       <parent>base_link</parent>
       <child>OakD-Lite/base_link</child>
       <pose relative_to="base_link">.09 .03 -.025 0.0 1.0472 0</pose>
-    </joint>
+    </joint> -->
+    <!-- -.10 -.03 -.025 0.0 1.0472 3.141592654-->
 
     <!-- <link name="camera_link_optical"></link>
     <joint name="camera_optical_joint" type="fixed">
