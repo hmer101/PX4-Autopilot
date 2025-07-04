@@ -92,6 +92,7 @@
     <xacro:tether_element elem_name="element_first" elem_length="${elem_length_ends}" elem_mass="${elem_mass_ends}" />
     <xacro:tether_element elem_name="element_last" elem_length="${elem_length_ends}" elem_mass="${elem_mass_ends}" />
 
+    <!-- Prismatic joints may or may not be useful. First is for tension modelling, second is for attempting to remove radial cable forces-->
     <xacro:tether_element elem_name="element_p1" elem_length="${elem_length_ends}" elem_mass="${elem_mass_ends}" />
     <xacro:tether_element elem_name="element_p2" elem_length="${elem_length_ends}" elem_mass="${elem_mass_ends}" />
     <xacro:tether_element elem_name="element_p3" elem_length="${elem_length_ends}" elem_mass="${elem_mass_ends}" />
