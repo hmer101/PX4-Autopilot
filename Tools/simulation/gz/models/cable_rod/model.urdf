@@ -66,13 +66,97 @@
                 </geometry>
             </collision> -->
   </link>
-  <joint name="joint_0_to_1" type="continuous">
+  <link name="element_p1">
+    <inertial>
+      <origin rpy="0 1.5707963267948966 0" xyz="5e-05 0 0"/>
+      <mass value="0.0001"/>
+      <inertia ixx="2.5000833333333336e-09" ixy="0" ixz="0" iyy="2.5000833333333336e-09" iyz="0" izz="5e-09"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 1.5707963267948966 0" xyz="5e-05 0 0"/>
+      <geometry>
+        <cylinder length="0.0001" radius="0.01"/>
+      </geometry>
+    </visual>
+    <!-- <collision>
+                <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
+                <geometry>
+                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                </geometry>
+            </collision> -->
+  </link>
+  <link name="element_p2">
+    <inertial>
+      <origin rpy="0 1.5707963267948966 0" xyz="5e-05 0 0"/>
+      <mass value="0.0001"/>
+      <inertia ixx="2.5000833333333336e-09" ixy="0" ixz="0" iyy="2.5000833333333336e-09" iyz="0" izz="5e-09"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 1.5707963267948966 0" xyz="5e-05 0 0"/>
+      <geometry>
+        <cylinder length="0.0001" radius="0.01"/>
+      </geometry>
+    </visual>
+    <!-- <collision>
+                <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
+                <geometry>
+                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                </geometry>
+            </collision> -->
+  </link>
+  <link name="element_p3">
+    <inertial>
+      <origin rpy="0 1.5707963267948966 0" xyz="5e-05 0 0"/>
+      <mass value="0.0001"/>
+      <inertia ixx="2.5000833333333336e-09" ixy="0" ixz="0" iyy="2.5000833333333336e-09" iyz="0" izz="5e-09"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 1.5707963267948966 0" xyz="5e-05 0 0"/>
+      <geometry>
+        <cylinder length="0.0001" radius="0.01"/>
+      </geometry>
+    </visual>
+    <!-- <collision>
+                <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
+                <geometry>
+                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                </geometry>
+            </collision> -->
+  </link>
+  <!-- Load-side ball joint -->
+  <joint name="joint_0_to_p1" type="continuous">
     <axis xyz="0. 1. 0."/>
     <origin rpy="0 0.0 0" xyz="0.0001 0 0"/>
     <parent link="element_first"/>
-    <child link="element_1"/>
+    <child link="element_p1"/>
     <dynamics damping="0.01" friction="0"/>
   </joint>
+  <!-- Prismatic joints (controlling tension direction) -->
+  <joint name="joint_p1_to_p2" type="prismatic">
+    <origin rpy="0 0 0" xyz="0.0001 0 0"/>
+    <parent link="element_p1"/>
+    <child link="element_p2"/>
+    <axis xyz="1. 0. 0."/>
+    <dynamics damping="0.0" friction="0.0"/>
+    <limit effort="10000.0" lower="-1.0" upper="0.0" velocity="10000.0"/>
+  </joint>
+  <joint name="joint_p2_to_p3" type="prismatic">
+    <origin rpy="0 0 0" xyz="0.0001 0 0"/>
+    <parent link="element_p2"/>
+    <child link="element_p3"/>
+    <axis xyz="0. 1. 0."/>
+    <dynamics damping="0.0" friction="0.0"/>
+    <limit effort="10000.0" lower="-0.1" upper="0.1" velocity="10000.0"/>
+  </joint>
+  <joint name="joint_p3_to_1" type="prismatic">
+    <origin rpy="0 0 0" xyz="0.0001 0 0"/>
+    <parent link="element_p3"/>
+    <child link="element_1"/>
+    <axis xyz="0. 0. 1."/>
+    <dynamics damping="0.0" friction="0.0"/>
+    <limit effort="10000.0" lower="-0.1" upper="0.1" velocity="10000.0"/>
+  </joint>
+  <!-- Drone-side ball joint -->
   <joint name="joint_1_to_2" type="continuous">
     <axis xyz="0. 1. 0."/>
     <origin rpy="0 0.0 0" xyz="1.4 0 0"/>

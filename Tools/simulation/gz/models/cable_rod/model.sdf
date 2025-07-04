@@ -23,10 +23,10 @@
         </geometry>
       </visual>
     </link>
-    <joint name='joint_0_to_1' type='universal'>
+    <joint name='joint_0_to_p1' type='universal'>
       <pose relative_to='element_first'>0.0001 0 0 0 0 0</pose>
       <parent>element_first</parent>
-      <child>element_1</child>
+      <child>element_p1</child>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -54,8 +54,140 @@
         </dynamics>
       </axis2>
     </joint>
+    <link name='element_p1'>
+      <pose relative_to='joint_0_to_p1'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>5.0000000000000002e-05 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.0001</mass>
+        <inertia>
+          <ixx>2.500083333333334e-09</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>2.500083333333334e-09</iyy>
+          <iyz>0</iyz>
+          <izz>5.0000000000000001e-09</izz>
+        </inertia>
+      </inertial>
+      <visual name='element_p1_visual'>
+        <pose>5.0000000000000002e-05 0 0 0 1.5707963267948966 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0001</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_p1_to_p2' type='prismatic'>
+      <pose relative_to='element_p1'>0.0001 0 0 0 0 0</pose>
+      <parent>element_p1</parent>
+      <child>element_p2</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1</lower>
+          <upper>0</upper>
+          <effort>10000</effort>
+          <velocity>10000</velocity>
+        </limit>
+        <dynamics>
+        <damping>0.0</damping>
+        <friction>0.0</friction>
+        <spring_reference>0.0</spring_reference>
+        <spring_stiffness>0.0</spring_stiffness>
+      </dynamics>
+      </axis>
+    </joint>
+    <link name='element_p2'>
+      <pose relative_to='joint_p1_to_p2'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>5.0000000000000002e-05 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.0001</mass>
+        <inertia>
+          <ixx>2.500083333333334e-09</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>2.500083333333334e-09</iyy>
+          <iyz>0</iyz>
+          <izz>5.0000000000000001e-09</izz>
+        </inertia>
+      </inertial>
+      <visual name='element_p2_visual'>
+        <pose>5.0000000000000002e-05 0 0 0 1.5707963267948966 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0001</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_p2_to_p3' type='prismatic'>
+      <pose relative_to='element_p2'>0.0001 0 0 0 0 0</pose>
+      <parent>element_p2</parent>
+      <child>element_p3</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.10000000000000001</lower>
+          <upper>0.10000000000000001</upper>
+          <effort>10000</effort>
+          <velocity>10000</velocity>
+        </limit>
+        <dynamics>
+        <damping>0.1</damping>
+        <friction>0.0</friction>
+        <spring_reference>0.0</spring_reference>
+        <spring_stiffness>25.0</spring_stiffness>
+      </dynamics>
+      </axis>
+    </joint>
+    <link name='element_p3'>
+      <pose relative_to='joint_p2_to_p3'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>5.0000000000000002e-05 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.0001</mass>
+        <inertia>
+          <ixx>2.500083333333334e-09</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>2.500083333333334e-09</iyy>
+          <iyz>0</iyz>
+          <izz>5.0000000000000001e-09</izz>
+        </inertia>
+      </inertial>
+      <visual name='element_p3_visual'>
+        <pose>5.0000000000000002e-05 0 0 0 1.5707963267948966 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0001</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_p3_to_1' type='prismatic'>
+      <pose relative_to='element_p3'>0.0001 0 0 0 0 0</pose>
+      <parent>element_p3</parent>
+      <child>element_1</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.10000000000000001</lower>
+          <upper>0.10000000000000001</upper>
+          <effort>10000</effort>
+          <velocity>10000</velocity>
+        </limit>
+        <dynamics>
+        <damping>0.1</damping>
+        <friction>0.0</friction>
+        <spring_reference>0.0</spring_reference>
+        <spring_stiffness>25.0</spring_stiffness>
+      </dynamics>
+      </axis>
+    </joint>
     <link name='element_1'>
-      <pose relative_to='joint_0_to_1'>0 0 0 0 0 0</pose>
+      <pose relative_to='joint_p3_to_1'>0 0 0 0 0 0</pose>
       <inertial>
         <pose>0.69999999999999996 0 0 0 1.5707963267948966 0</pose>
         <mass>0.02</mass>

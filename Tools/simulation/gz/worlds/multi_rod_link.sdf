@@ -6,6 +6,8 @@
       <real_time_factor>1.0</real_time_factor> <!--1.0-->
       <real_time_update_rate>250</real_time_update_rate> <!--250-->
     </physics>
+    <!-- <plugin name="gz::sim::components::PoseCmd" filename="gz-sim-pose-cmd-system"/> -->
+    <!-- <plugin name="gz::sim::systems::PhysicsCmd" filename="gz-sim-physics-cmd-system"/> -->
     <plugin name='ignition::gazebo::systems::Physics' filename='ignition-gazebo-physics-system'/>
     <plugin name='ignition::gazebo::systems::UserCommands' filename='ignition-gazebo-user-commands-system'/>
     <plugin name='ignition::gazebo::systems::SceneBroadcaster' filename='ignition-gazebo-scene-broadcaster-system'/>
@@ -232,7 +234,6 @@
         <parent>load::base_link</parent>
         <child>tether_1::element_first</child>
         <pose>0.1 0.0 0.03 0.0 0.0 0.0</pose> 
-        <!-- <pose>0.08 0.0 0.03 0.0 0.0 0.0</pose> -->
       </joint>
 
       <joint name="joint_tether_1_drone_1" type="fixed">
@@ -241,12 +242,42 @@
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
       </joint>
 
+      <!-- <joint name="joint_load_tether_1" type="prismatic">
+        <parent>load::base_link</parent>
+        <child>tether_1::element_first</child>
+        <pose>0.1 0.0 0.03 0.0 0.0 0.0</pose>
+        <axis>
+          <xyz>0 0 1</xyz> 
+          <limit>
+            <lower>0</lower> 
+            <upper>0.2</upper> 
+            <effort>100</effort>
+            <velocity>1</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="joint_tether_1_drone_1" type="prismatic">
+        <parent>tether_1::element_last</parent>
+        <child>x500_1::base_link</child>
+        <pose>0 0 0 0 0 0</pose>
+        <axis>
+          <xyz>0 0 -1</xyz> 
+          <limit>
+            <lower>0</lower>
+            <upper>0.2</upper>
+            <effort>100</effort>
+            <velocity>1</velocity>
+          </limit>
+        </axis>
+      </joint> -->
+
+
 
       <!-- Tether 2 -->
       <joint name="joint_load_tether_2" type="fixed">
         <parent>load::base_link</parent>
         <child>tether_2::element_first</child>
-        <!-- <pose>-0.04 0.069 0.1 0.0 0.0 0.0</pose> -->
         <pose>-0.05 0.087 0.03 0.0 0.0 0.0</pose>
       </joint>
 
@@ -256,13 +287,43 @@
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
       </joint>
 
+      <!-- <joint name="joint_load_tether_2" type="prismatic">
+        <parent>load::base_link</parent>
+        <child>tether_2::element_first</child>
+        <pose>-0.05 0.087 0.03 0 0 0</pose>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>0.2</upper>
+            <effort>100</effort>
+            <velocity>1</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="joint_tether_2_drone_2" type="prismatic">
+        <parent>tether_2::element_last</parent>
+        <child>x500_2::base_link</child>
+        <pose>0 0 0 0 0 0</pose>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>0.2</upper>
+            <effort>100</effort>
+            <velocity>1</velocity>
+          </limit>
+        </axis>
+      </joint> -->
+
+
 
       <!-- Tether 3 -->
       <joint name="joint_load_tether_3" type="fixed">
         <parent>load::base_link</parent>
         <child>tether_3::element_first</child>
         <pose>-0.05 -0.087 0.03 0.0 0.0 0.0</pose>
-        <!-- <pose>-0.04 -0.069 0.1 0.0 0.0 0.0</pose> -->
       </joint>
 
       <joint name="joint_tether_3_drone_3" type="fixed">
@@ -270,6 +331,36 @@
         <child>x500_3::base_link</child>
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
       </joint>
+
+      <!-- <joint name="joint_load_tether_3" type="prismatic">
+        <parent>load::base_link</parent>
+        <child>tether_3::element_first</child>
+        <pose>-0.05 -0.087 0.03 0 0 0</pose>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>0.2</upper>
+            <effort>100</effort>
+            <velocity>1</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="joint_tether_3_drone_3" type="prismatic">
+        <parent>tether_3::element_last</parent>
+        <child>x500_3::base_link</child>
+        <pose>0 0 0 0 0 0</pose>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>0.2</upper>
+            <effort>100</effort>
+            <velocity>1</velocity>
+          </limit>
+        </axis>
+      </joint> -->
 
     </model>
 

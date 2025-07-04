@@ -599,5 +599,8 @@
       <static_update_frequency>60</static_update_frequency>
     </plugin>
 
+    <!-- Allow drones pose to be set directly-->
+    <!-- <plugin name="gz::sim::systems::PoseCmd" filename="gz-sim-pose-cmd-system"/> -->
+    <!-- <plugin name="gz::sim::components::PoseCmd" filename="gz-sim-pose-cmd-system"/> -->
   </model>
 </sdf>
