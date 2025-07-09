@@ -191,8 +191,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_1</name>
-        <!-- <pose>1.5 0 .24 0 0 3.141592654</pose> -->
-        <pose>2.1 0 .24 0 0 3.141592654</pose>
+        <pose>1.5 0 .24 0 0 3.141592654</pose>
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
@@ -204,8 +203,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_2</name>
-        <!-- <pose>-0.75 1.299 .24 0 0 0</pose> -->
-        <pose>-1.0499999999999996, 1.8186533479473213 .24 0 0 0</pose>
+        <pose>-0.75 1.299 .24 0 0 0</pose>
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
@@ -217,8 +215,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_3</name>
-        <!-- <pose>-0.75 -1.299 .24 0 0 0</pose> -->
-        <pose>-1.050000000000001, -1.8186533479473206 .24 0 0 0</pose>
+        <pose>-0.75 -1.299 .24 0 0 0</pose>
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">

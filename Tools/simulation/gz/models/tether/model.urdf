@@ -11,14 +11,14 @@
   <!--5-->
   <link name="element_10">
     <inertial>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <mass value="0.002"/>
-      <inertia ixx="8.044102338458255e-06" ixy="0" ixz="0" iyy="8.044102338458255e-06" iyz="0" izz="1.0000000000000001e-07"/>
+      <inertia ixx="1.6364494568282152e-05" ixy="0" ixz="0" iyy="1.6364494568282152e-05" iyz="0" izz="1.0000000000000001e-07"/>
     </inertial>
     <visual>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <geometry>
-        <cylinder length="0.2190082510563233" radius="0.01"/>
+        <cylinder length="0.31286893008046185" radius="0.01"/>
       </geometry>
     </visual>
     <!-- <collision>
@@ -30,14 +30,14 @@
   </link>
   <link name="element_9">
     <inertial>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <mass value="0.002"/>
-      <inertia ixx="8.044102338458255e-06" ixy="0" ixz="0" iyy="8.044102338458255e-06" iyz="0" izz="1.0000000000000001e-07"/>
+      <inertia ixx="1.6364494568282152e-05" ixy="0" ixz="0" iyy="1.6364494568282152e-05" iyz="0" izz="1.0000000000000001e-07"/>
     </inertial>
     <visual>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <geometry>
-        <cylinder length="0.2190082510563233" radius="0.01"/>
+        <cylinder length="0.31286893008046185" radius="0.01"/>
       </geometry>
     </visual>
     <!-- <collision>
@@ -49,14 +49,14 @@
   </link>
   <link name="element_8">
     <inertial>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <mass value="0.002"/>
-      <inertia ixx="8.044102338458255e-06" ixy="0" ixz="0" iyy="8.044102338458255e-06" iyz="0" izz="1.0000000000000001e-07"/>
+      <inertia ixx="1.6364494568282152e-05" ixy="0" ixz="0" iyy="1.6364494568282152e-05" iyz="0" izz="1.0000000000000001e-07"/>
     </inertial>
     <visual>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <geometry>
-        <cylinder length="0.2190082510563233" radius="0.01"/>
+        <cylinder length="0.31286893008046185" radius="0.01"/>
       </geometry>
     </visual>
     <!-- <collision>
@@ -68,14 +68,14 @@
   </link>
   <link name="element_7">
     <inertial>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <mass value="0.002"/>
-      <inertia ixx="8.044102338458255e-06" ixy="0" ixz="0" iyy="8.044102338458255e-06" iyz="0" izz="1.0000000000000001e-07"/>
+      <inertia ixx="1.6364494568282152e-05" ixy="0" ixz="0" iyy="1.6364494568282152e-05" iyz="0" izz="1.0000000000000001e-07"/>
     </inertial>
     <visual>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <geometry>
-        <cylinder length="0.2190082510563233" radius="0.01"/>
+        <cylinder length="0.31286893008046185" radius="0.01"/>
       </geometry>
     </visual>
     <!-- <collision>
@@ -87,14 +87,14 @@
   </link>
   <link name="element_6">
     <inertial>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <mass value="0.002"/>
-      <inertia ixx="8.044102338458255e-06" ixy="0" ixz="0" iyy="8.044102338458255e-06" iyz="0" izz="1.0000000000000001e-07"/>
+      <inertia ixx="1.6364494568282152e-05" ixy="0" ixz="0" iyy="1.6364494568282152e-05" iyz="0" izz="1.0000000000000001e-07"/>
     </inertial>
     <visual>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <geometry>
-        <cylinder length="0.2190082510563233" radius="0.01"/>
+        <cylinder length="0.31286893008046185" radius="0.01"/>
       </geometry>
     </visual>
     <!-- <collision>
@@ -106,14 +106,14 @@
   </link>
   <link name="element_5">
     <inertial>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <mass value="0.002"/>
-      <inertia ixx="8.044102338458255e-06" ixy="0" ixz="0" iyy="8.044102338458255e-06" iyz="0" izz="1.0000000000000001e-07"/>
+      <inertia ixx="1.6364494568282152e-05" ixy="0" ixz="0" iyy="1.6364494568282152e-05" iyz="0" izz="1.0000000000000001e-07"/>
     </inertial>
     <visual>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <geometry>
-        <cylinder length="0.2190082510563233" radius="0.01"/>
+        <cylinder length="0.31286893008046185" radius="0.01"/>
       </geometry>
     </visual>
     <!-- <collision>
@@ -125,14 +125,14 @@
   </link>
   <link name="element_4">
     <inertial>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <mass value="0.002"/>
-      <inertia ixx="8.044102338458255e-06" ixy="0" ixz="0" iyy="8.044102338458255e-06" iyz="0" izz="1.0000000000000001e-07"/>
+      <inertia ixx="1.6364494568282152e-05" ixy="0" ixz="0" iyy="1.6364494568282152e-05" iyz="0" izz="1.0000000000000001e-07"/>
     </inertial>
     <visual>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <geometry>
-        <cylinder length="0.2190082510563233" radius="0.01"/>
+        <cylinder length="0.31286893008046185" radius="0.01"/>
       </geometry>
     </visual>
     <!-- <collision>
@@ -144,14 +144,14 @@
   </link>
   <link name="element_3">
     <inertial>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <mass value="0.002"/>
-      <inertia ixx="8.044102338458255e-06" ixy="0" ixz="0" iyy="8.044102338458255e-06" iyz="0" izz="1.0000000000000001e-07"/>
+      <inertia ixx="1.6364494568282152e-05" ixy="0" ixz="0" iyy="1.6364494568282152e-05" iyz="0" izz="1.0000000000000001e-07"/>
     </inertial>
     <visual>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <geometry>
-        <cylinder length="0.2190082510563233" radius="0.01"/>
+        <cylinder length="0.31286893008046185" radius="0.01"/>
       </geometry>
     </visual>
     <!-- <collision>
@@ -163,14 +163,14 @@
   </link>
   <link name="element_2">
     <inertial>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <mass value="0.002"/>
-      <inertia ixx="8.044102338458255e-06" ixy="0" ixz="0" iyy="8.044102338458255e-06" iyz="0" izz="1.0000000000000001e-07"/>
+      <inertia ixx="1.6364494568282152e-05" ixy="0" ixz="0" iyy="1.6364494568282152e-05" iyz="0" izz="1.0000000000000001e-07"/>
     </inertial>
     <visual>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <geometry>
-        <cylinder length="0.2190082510563233" radius="0.01"/>
+        <cylinder length="0.31286893008046185" radius="0.01"/>
       </geometry>
     </visual>
     <!-- <collision>
@@ -182,14 +182,14 @@
   </link>
   <link name="element_1">
     <inertial>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <mass value="0.002"/>
-      <inertia ixx="8.044102338458255e-06" ixy="0" ixz="0" iyy="8.044102338458255e-06" iyz="0" izz="1.0000000000000001e-07"/>
+      <inertia ixx="1.6364494568282152e-05" ixy="0" ixz="0" iyy="1.6364494568282152e-05" iyz="0" izz="1.0000000000000001e-07"/>
     </inertial>
     <visual>
-      <origin rpy="0 1.5707963267948966 0" xyz="0.10950412552816165 0 0"/>
+      <origin rpy="0 1.5707963267948966 0" xyz="0.15643446504023092 0 0"/>
       <geometry>
-        <cylinder length="0.2190082510563233" radius="0.01"/>
+        <cylinder length="0.31286893008046185" radius="0.01"/>
       </geometry>
     </visual>
     <!-- <collision>
@@ -202,7 +202,7 @@
   <joint name="joint_1_to_2" type="continuous">
     <axis xyz="0. 1. 0."/>
     <!-- <axis xyz="0. 1. 1."/> -->
-    <origin rpy="0 -0.3141592653589793 0" xyz="0.2190082510563233 0 0"/>
+    <origin rpy="0 -0.3141592653589793 0" xyz="0.31286893008046185 0 0"/>
     <!-- <xacro:if value="${elem_num  == 1}">
                     <origin xyz="${elem_length_main} 0 0" rpy="0 ${ang_i/2} 0"/>
                 </xacro:if>
@@ -219,7 +219,7 @@
   <joint name="joint_2_to_3" type="continuous">
     <axis xyz="0. 1. 0."/>
     <!-- <axis xyz="0. 1. 1."/> -->
-    <origin rpy="0 -0.3141592653589793 0" xyz="0.2190082510563233 0 0"/>
+    <origin rpy="0 -0.3141592653589793 0" xyz="0.31286893008046185 0 0"/>
     <!-- <xacro:if value="${elem_num  == 1}">
                     <origin xyz="${elem_length_main} 0 0" rpy="0 ${ang_i/2} 0"/>
                 </xacro:if>
@@ -236,7 +236,7 @@
   <joint name="joint_3_to_4" type="continuous">
     <axis xyz="0. 1. 0."/>
     <!-- <axis xyz="0. 1. 1."/> -->
-    <origin rpy="0 -0.3141592653589793 0" xyz="0.2190082510563233 0 0"/>
+    <origin rpy="0 -0.3141592653589793 0" xyz="0.31286893008046185 0 0"/>
     <!-- <xacro:if value="${elem_num  == 1}">
                     <origin xyz="${elem_length_main} 0 0" rpy="0 ${ang_i/2} 0"/>
                 </xacro:if>
@@ -253,7 +253,7 @@
   <joint name="joint_4_to_5" type="continuous">
     <axis xyz="0. 1. 0."/>
     <!-- <axis xyz="0. 1. 1."/> -->
-    <origin rpy="0 -0.3141592653589793 0" xyz="0.2190082510563233 0 0"/>
+    <origin rpy="0 -0.3141592653589793 0" xyz="0.31286893008046185 0 0"/>
     <!-- <xacro:if value="${elem_num  == 1}">
                     <origin xyz="${elem_length_main} 0 0" rpy="0 ${ang_i/2} 0"/>
                 </xacro:if>
@@ -270,7 +270,7 @@
   <joint name="joint_5_to_6" type="continuous">
     <axis xyz="0. 1. 0."/>
     <!-- <axis xyz="0. 1. 1."/> -->
-    <origin rpy="0 -0.3141592653589793 0" xyz="0.2190082510563233 0 0"/>
+    <origin rpy="0 -0.3141592653589793 0" xyz="0.31286893008046185 0 0"/>
     <!-- <xacro:if value="${elem_num  == 1}">
                     <origin xyz="${elem_length_main} 0 0" rpy="0 ${ang_i/2} 0"/>
                 </xacro:if>
@@ -287,7 +287,7 @@
   <joint name="joint_6_to_7" type="continuous">
     <axis xyz="0. 1. 0."/>
     <!-- <axis xyz="0. 1. 1."/> -->
-    <origin rpy="0 -0.3141592653589793 0" xyz="0.2190082510563233 0 0"/>
+    <origin rpy="0 -0.3141592653589793 0" xyz="0.31286893008046185 0 0"/>
     <!-- <xacro:if value="${elem_num  == 1}">
                     <origin xyz="${elem_length_main} 0 0" rpy="0 ${ang_i/2} 0"/>
                 </xacro:if>
@@ -304,7 +304,7 @@
   <joint name="joint_7_to_8" type="continuous">
     <axis xyz="0. 1. 0."/>
     <!-- <axis xyz="0. 1. 1."/> -->
-    <origin rpy="0 -0.3141592653589793 0" xyz="0.2190082510563233 0 0"/>
+    <origin rpy="0 -0.3141592653589793 0" xyz="0.31286893008046185 0 0"/>
     <!-- <xacro:if value="${elem_num  == 1}">
                     <origin xyz="${elem_length_main} 0 0" rpy="0 ${ang_i/2} 0"/>
                 </xacro:if>
@@ -321,7 +321,7 @@
   <joint name="joint_8_to_9" type="continuous">
     <axis xyz="0. 1. 0."/>
     <!-- <axis xyz="0. 1. 1."/> -->
-    <origin rpy="0 -0.3141592653589793 0" xyz="0.2190082510563233 0 0"/>
+    <origin rpy="0 -0.3141592653589793 0" xyz="0.31286893008046185 0 0"/>
     <!-- <xacro:if value="${elem_num  == 1}">
                     <origin xyz="${elem_length_main} 0 0" rpy="0 ${ang_i/2} 0"/>
                 </xacro:if>
@@ -338,7 +338,7 @@
   <joint name="joint_9_to_10" type="continuous">
     <axis xyz="0. 1. 0."/>
     <!-- <axis xyz="0. 1. 1."/> -->
-    <origin rpy="0 -0.3141592653589793 0" xyz="0.2190082510563233 0 0"/>
+    <origin rpy="0 -0.3141592653589793 0" xyz="0.31286893008046185 0 0"/>
     <!-- <xacro:if value="${elem_num  == 1}">
                     <origin xyz="${elem_length_main} 0 0" rpy="0 ${ang_i/2} 0"/>
                 </xacro:if>
@@ -399,7 +399,7 @@
   </joint>
   <joint name="joint_10_to_11" type="continuous">
     <axis xyz="0. 1. 0."/>
-    <origin rpy="0 1.413716694115407 0" xyz="0.2190082510563233 0 0"/>
+    <origin rpy="0 1.413716694115407 0" xyz="0.31286893008046185 0 0"/>
     <parent link="element_10"/>
     <child link="element_last"/>
     <dynamics damping="0.01" friction="0"/>

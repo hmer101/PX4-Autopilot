@@ -16,7 +16,7 @@ sed -i 's/revolute/universal/g' model.sdf
 perl -i -pe 'BEGIN{undef $/;} s|      <\/axis>\n    <\/joint>|      </axis>\n      <axis2>\n        <xyz>'"${JOINT2_AXIS}"'</xyz>\n        <limit>\n          <lower>-inf</lower>\n          <upper>inf</upper>\n        </limit>\n        <dynamics>\n          <damping>'"${JOINT2_DAMPING}"'</damping>\n          <friction>'"${JOINT2_FRICTION}"'</friction>\n          <spring_reference>0</spring_reference>\n          <spring_stiffness>'"${JOINT2_SPRING_STIFFNESS}"'</spring_stiffness>\n        </dynamics>\n      </axis2>\n    </joint>|gsm' model.sdf
 
 # Calculate total length of tether
-elem_length_main=0.21900825105632329  # Replace with actual value or source
+elem_length_main=0.31286893008046179 #0.21900825105632329  # Replace with actual value or source
 num_elements=10       # Replace with actual value or source
 elem_length_ends=0.0001 # Replace with actual value or source
 
