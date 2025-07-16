@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sdf version='1.9'>
-  <world name='default'>
+  <world name='multi_drone_slung_load'>
     <physics type="ode">
       <max_step_size>0.004</max_step_size>
       <real_time_factor>1.0</real_time_factor> <!--1.0-->
@@ -12,6 +12,7 @@
     <plugin name='ignition::gazebo::systems::Contact' filename='ignition-gazebo-contact-system'/>
     <plugin name='ignition::gazebo::systems::Imu' filename='ignition-gazebo-imu-system'/>
     <plugin name='ignition::gazebo::systems::AirPressure' filename='ignition-gazebo-air-pressure-system'/>
+    <plugin name='ignition::gazebo::systems::ForceTorque' filename='ignition-gazebo-forcetorque-system'/>
     <plugin name='ignition::gazebo::systems::Sensors' filename='ignition-gazebo-sensors-system'>
       <render_engine>ogre2</render_engine>
     </plugin>
@@ -327,6 +328,15 @@
         <parent>tether_1::element_last</parent>
         <child>x500_1::base_link</child>
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+
+        <sensor name="ft_sensor" type="force_torque">
+          <always_on>true</always_on>
+          <update_rate>100</update_rate>
+          <force_torque>
+            <frame>child</frame>
+            <measure_direction>child_to_parent</measure_direction>
+          </force_torque>
+        </sensor>
       </joint>
 
 
@@ -342,6 +352,15 @@
         <parent>tether_2::element_last</parent>
         <child>x500_2::base_link</child>
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+
+        <sensor name="ft_sensor" type="force_torque">
+          <always_on>true</always_on>
+          <update_rate>100</update_rate>
+          <force_torque>
+            <frame>child</frame>
+            <measure_direction>child_to_parent</measure_direction>
+          </force_torque>
+        </sensor>
       </joint>
 
 
@@ -357,6 +376,15 @@
         <parent>tether_3::element_last</parent>
         <child>x500_3::base_link</child>
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+
+        <sensor name="ft_sensor" type="force_torque">
+          <always_on>true</always_on>
+          <update_rate>100</update_rate>
+          <force_torque>
+            <frame>child</frame>
+            <measure_direction>child_to_parent</measure_direction>
+          </force_torque>
+        </sensor>
       </joint>
 
     </model>
