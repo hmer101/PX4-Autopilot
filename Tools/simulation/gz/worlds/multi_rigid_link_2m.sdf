@@ -14,7 +14,7 @@
     <plugin name='ignition::gazebo::systems::Imu' filename='ignition-gazebo-imu-system'/>
     <plugin name='ignition::gazebo::systems::AirPressure' filename='ignition-gazebo-air-pressure-system'/>
     <plugin name='ignition::gazebo::systems::ForceTorque' filename='ignition-gazebo-forcetorque-system'/>
-    <plugin name="sim_rigid_cable_plugin" filename="sim_rigid_cable_plugin"/>
+    <!-- <plugin name="sim_rigid_cable_plugin" filename="sim_rigid_cable_plugin"/> -->
     <plugin name='ignition::gazebo::systems::Sensors' filename='ignition-gazebo-sensors-system'>
       <render_engine>ogre2</render_engine>
     </plugin>
@@ -194,8 +194,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_1</name>
-        <!-- <pose>1.5 0 .24 0 0 3.141592654</pose> -->
-        <pose>2.1 0 .24 0 0 3.141592654</pose>
+        <pose>1.5 0 .24 0 0 3.141592654</pose>
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
@@ -207,8 +206,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_2</name>
-        <!-- <pose>-0.75 1.299 .24 0 0 0</pose> -->
-        <pose>-1.0499999999999996, 1.8186533479473213 .24 0 0 0</pose>
+        <pose>-0.75 1.299 .24 0 0 0</pose>
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
@@ -220,8 +218,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_3</name>
-        <!-- <pose>-0.75 -1.299 .24 0 0 0</pose> -->
-        <pose>-1.050000000000001, -1.8186533479473206 .24 0 0 0</pose>
+        <pose>-0.75 -1.299 .24 0 0 0</pose>
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
@@ -232,88 +229,22 @@
 
 
       <include>
-        <uri>tether</uri>
+        <uri>tether_2m</uri>
         <name>tether_1</name>
         <pose>0.1 0 .2 0 0 0</pose>
       </include>
 
       <include>
-        <uri>tether</uri>
+        <uri>tether_2m</uri>
         <name>tether_2</name>
         <pose>-0.05 0.0866 .2 0 0 2.09439510239</pose>
       </include>
 
       <include>
-        <uri>tether</uri>
+        <uri>tether_2m</uri>
         <name>tether_3</name>
         <pose>-0.05 -0.0866 .2 0 0 4.18879020479</pose>
       </include>
-
-      <!-- SPAWN POINT 7: TRANSLATED AND ROTATED-->
-      <!-- <include>
-        <uri>aruco_box</uri>
-        <name>load</name>
-        <pose>-2.5 -15.0 0.17 0 0 -2.8415926649574397</pose> 
-        It appears that this moves where the tethers attach to the load but not necessarily where the load is?
-        <pose>-2.5 -15.0 0.1 0 0 -2.8415926649574397</pose>
-      </include>
-
-      <include>
-        <uri>x500_camera_down</uri>
-        <name>x500_1</name>
-        <pose>-3.933004733688409 -15.443280309992009 0.24 0 0 0.29999998863</pose>
-
-        <experimental:params>
-          <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
-            <topic>px4_1/out/camera</topic>
-          </sensor>
-        </experimental:params>
-      </include>
-
-      <include>
-        <uri>x500_camera_down</uri>
-        <name>x500_2</name>
-        <pose>-1.3993213644960543 -16.020297280867283 0.24 0 0 -2.8415926649574397</pose>
-
-        <experimental:params>
-          <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
-            <topic>px4_2/out/camera</topic>
-          </sensor>
-        </experimental:params>
-      </include>
-
-      <include>
-        <uri>x500_camera_down</uri>
-        <name>x500_3</name>
-        <pose>-2.1676739018155367 -13.536422409140707 0.24 0 0 -2.8415926649574397</pose>
-
-        <experimental:params>
-          <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
-            <topic>px4_3/out/camera</topic>
-          </sensor>
-        </experimental:params>
-      </include>
-
-      <include>
-        <uri>tether</uri>
-        <name>tether_1</name>
-        <pose>-2.5955336492484977 -14.97044798041986 0.2 0 0 -2.8415926649574397</pose>
-        <pose>-2.5764269191300486 -15.023641616532908 0.06 0 0 -2.8415926649574397</pose>
-      </include>
-
-      <include>
-        <uri>tether</uri>
-        <name>tether_2</name>
-        <pose>-2.477943432410474 -15.097890284636263 0.2 0 0 -0.7471975867335672</pose>
-        <pose>-2.4413956461753434 -15.054097409483214 0.2 0 0 -0.7471975867335672</pose>
-      </include>
-
-      <include>
-        <uri>tether</uri>
-        <name>tether_3</name>
-        <pose>-2.4265229183410284 -14.931661734943878 0.2 0 0 1.3471976191379473</pose>
-        <pose>-2.4821774346946084 -14.92226097398388 0.2 0 0 1.3471976191379473</pose>
-      </include> -->
 
 
       <!-- CONNECTIONS -->

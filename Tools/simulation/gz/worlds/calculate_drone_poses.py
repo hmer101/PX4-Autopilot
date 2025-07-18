@@ -69,7 +69,7 @@ rotation_angle = 0
 
 # Drones rel load
 n_points = 3
-r_drones = 2.1 #1.5
+r_drones = 1.5 #2.1 (3.13 m cable) #1.5 (2.19 m cable) #m
 
 # Tether placement
 r_tethers = 0.1 #m

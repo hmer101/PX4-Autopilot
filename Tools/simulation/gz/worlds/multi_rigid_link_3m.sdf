@@ -10,8 +10,11 @@
     <plugin name='ignition::gazebo::systems::UserCommands' filename='ignition-gazebo-user-commands-system'/>
     <plugin name='ignition::gazebo::systems::SceneBroadcaster' filename='ignition-gazebo-scene-broadcaster-system'/>
     <plugin name='ignition::gazebo::systems::Contact' filename='ignition-gazebo-contact-system'/>
+    <plugin name='ignition::gazebo::systems::ApplyLinkWrench' filename='ignition-gazebo-apply-link-wrench-system'/>
     <plugin name='ignition::gazebo::systems::Imu' filename='ignition-gazebo-imu-system'/>
     <plugin name='ignition::gazebo::systems::AirPressure' filename='ignition-gazebo-air-pressure-system'/>
+    <plugin name='ignition::gazebo::systems::ForceTorque' filename='ignition-gazebo-forcetorque-system'/>
+    <!-- <plugin name="sim_rigid_cable_plugin" filename="sim_rigid_cable_plugin"/> -->
     <plugin name='ignition::gazebo::systems::Sensors' filename='ignition-gazebo-sensors-system'>
       <render_engine>ogre2</render_engine>
     </plugin>
@@ -191,7 +194,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_1</name>
-        <pose>1.5 0 .24 0 0 3.141592654</pose>
+        <pose>2.1 0 .24 0 0 3.141592654</pose>
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
@@ -203,7 +206,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_2</name>
-        <pose>-0.75 1.299 .24 0 0 0</pose>
+        <pose>-1.0499999999999996, 1.8186533479473213 .24 0 0 0</pose>
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
@@ -215,7 +218,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_3</name>
-        <pose>-0.75 -1.299 .24 0 0 0</pose>
+        <pose>-1.050000000000001, -1.8186533479473206 .24 0 0 0</pose>
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
@@ -226,19 +229,19 @@
 
 
       <include>
-        <uri>tether</uri>
+        <uri>tether_3m</uri>
         <name>tether_1</name>
         <pose>0.1 0 .2 0 0 0</pose>
       </include>
 
       <include>
-        <uri>tether</uri>
+        <uri>tether_3m</uri>
         <name>tether_2</name>
         <pose>-0.05 0.0866 .2 0 0 2.09439510239</pose>
       </include>
 
       <include>
-        <uri>tether</uri>
+        <uri>tether_3m</uri>
         <name>tether_3</name>
         <pose>-0.05 -0.0866 .2 0 0 4.18879020479</pose>
       </include>
@@ -317,13 +320,21 @@
         <parent>load::base_link</parent>
         <child>tether_1::element_first</child>
         <pose>0.1 0.0 0.03 0.0 0.0 0.0</pose> 
-        <!-- <pose>0.08 0.0 0.03 0.0 0.0 0.0</pose> -->
       </joint>
 
       <joint name="joint_tether_1_drone_1" type="fixed">
         <parent>tether_1::element_last</parent>
         <child>x500_1::base_link</child>
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+
+        <sensor name="ft_sensor" type="force_torque">
+          <always_on>true</always_on>
+          <update_rate>100</update_rate>
+          <force_torque>
+            <frame>child</frame>
+            <measure_direction>child_to_parent</measure_direction>
+          </force_torque>
+        </sensor>
       </joint>
 
 
@@ -331,7 +342,6 @@
       <joint name="joint_load_tether_2" type="fixed">
         <parent>load::base_link</parent>
         <child>tether_2::element_first</child>
-        <!-- <pose>-0.04 0.069 0.1 0.0 0.0 0.0</pose> -->
         <pose>-0.05 0.087 0.03 0.0 0.0 0.0</pose>
       </joint>
 
@@ -339,6 +349,15 @@
         <parent>tether_2::element_last</parent>
         <child>x500_2::base_link</child>
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+
+        <sensor name="ft_sensor" type="force_torque">
+          <always_on>true</always_on>
+          <update_rate>100</update_rate>
+          <force_torque>
+            <frame>child</frame>
+            <measure_direction>child_to_parent</measure_direction>
+          </force_torque>
+        </sensor>
       </joint>
 
 
@@ -347,16 +366,30 @@
         <parent>load::base_link</parent>
         <child>tether_3::element_first</child>
         <pose>-0.05 -0.087 0.03 0.0 0.0 0.0</pose>
-        <!-- <pose>-0.04 -0.069 0.1 0.0 0.0 0.0</pose> -->
       </joint>
 
       <joint name="joint_tether_3_drone_3" type="fixed">
         <parent>tether_3::element_last</parent>
         <child>x500_3::base_link</child>
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+
+        <sensor name="ft_sensor" type="force_torque">
+          <always_on>true</always_on>
+          <update_rate>100</update_rate>
+          <force_torque>
+            <frame>child</frame>
+            <measure_direction>child_to_parent</measure_direction>
+          </force_torque>
+        </sensor>
       </joint>
 
     </model>
+
+    <!-- <include>
+      <uri>faux_box</uri>
+      <name>faux_box</name>
+      <pose>0 0 0.17 0 0 0</pose> 
+    </include> -->
 
   </world>
 </sdf>

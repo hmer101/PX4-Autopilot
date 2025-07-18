@@ -1,15 +1,15 @@
 <?xml version="1.0" ?>
-<robot name="tether" xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="tether_3m" xmlns:xacro="http://ros.org/wiki/xacro">
     <!-- Xacro to generate tether SDF -->
     <!-- Note: need to manually find and replace all references to 'revolute'
     with 'universal' in final SDF to get better tether. This also involves adding in a second axis.
     These changes are now all defined in generate_sdf.sh-->
 
     <!-- Define properties -->
-    <xacro:property name="dist_connect_points" value="2.0" /> <!--1.4 - 1.42-->
+    <xacro:property name="dist_connect_points" value="2.0" /> 
     <xacro:property name="tether_radius" value="0.01" />
-    <xacro:property name="tether_mass" value="0.02" /> <!--0.1-->
-    <xacro:property name="num_elements" value="10" /> <!--5-->
+    <xacro:property name="tether_mass" value="0.02" /> 
+    <xacro:property name="num_elements" value="10" /> 
 
     <xacro:property name="elem_length_ends" value="0.0001" />
     <xacro:property name="elem_mass_main" value="${tether_mass/num_elements}" />
