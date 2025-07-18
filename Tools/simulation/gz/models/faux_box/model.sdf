@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+
+  <model name='faux_box'>
+    <static>false</static>
+    <pose>0 0 0.03 0 0 3.141592654</pose>
+
+    <link name='base_link'>
+      <inertial>
+        <mass>1.6</mass>
+        <inertia>
+          <ixx>0.01248</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01248</iyy>
+          <iyz>0</iyz>
+          <izz>0.024</izz>
+        </inertia>
+        <pose>0 0 0 0 0 3.141592654</pose>
+      </inertial>
+
+      <!-- Visual geometry as red box -->
+      <visual name='faux_box_visual'>
+        <geometry>
+          <box>
+            <size>0.3 0.3 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1.0 0.0 0.0 0.6</ambient>   <!-- Red -->
+          <diffuse>1.0 0.0 0.0 0.6</diffuse>
+          <specular>0.1 0.1 0.1 0.6</specular>
+          <emissive>0.0 0.0 0.0 0.0</emissive>
+        </material>
+        <transparency>0.2</transparency> <!-- 0 = solid, 1 = invisible -->
+        <cast_shadows>false</cast_shadows>
+      </visual>
+
+      <collision name='collision'>
+        <geometry>
+        <box>
+            <size>0.3 0.3 0.06</size>
+        </box>
+        </geometry>
+        <surface>
+        <contact>
+            <ode/>
+            <collide_bitmask>0x10</collide_bitmask>
+        </contact>
+        <bounce/>
+        <friction>
+            <torsional>
+            <ode/>
+            </torsional>
+            <ode/>
+        </friction>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+    </link>
+
+    <plugin filename="libignition-gazebo-pose-publisher-system"
+      name="ignition::gazebo::systems::PosePublisher">
+      <publish_link_pose>true</publish_link_pose>
+      <publish_sensor_pose>false</publish_sensor_pose>
+      <publish_collision_pose>false</publish_collision_pose>
+      <publish_visual_pose>false</publish_visual_pose>
+      <publish_nested_model_pose>true</publish_nested_model_pose>
+      <use_pose_vector_msg>true</use_pose_vector_msg>
+      <update_frequency>0</update_frequency>
+      <static_publisher>true</static_publisher>
+      <static_update_frequency>60</static_update_frequency>
+    </plugin>
+  </model>
+
+</sdf>

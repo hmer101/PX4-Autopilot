@@ -15,6 +15,24 @@
     <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
       <render_engine>ogre2</render_engine>
     </plugin>
+
+    <plugin
+      filename="gz-sim-apply-link-wrench-system"
+      name="gz::sim::systems::ApplyLinkWrench">
+      <!-- <persistent>
+        <entity_name>link_1</entity_name>
+        <entity_type>link</entity_type>
+        <force>-10 0 0</force>
+        <torque>0 0 0.1</torque>
+      </persistent> -->
+    </plugin>
+
+    <!-- gz topic -t "/world/default/wrench/persistent" -m gz.msgs.EntityWrench  -p "entity: {name: 'link_1', type: LINK}, wrench: {force: {x: -20}}" -->
+    <!-- gz topic -t "/world/default/wrench/clear" -m gz.msgs.Entity  -p "name: 'link_1', type: LINK" -->
+    
+    <!-- gz topic -t "/world/multi_drone_slung_load/wrench" -m gz.msgs.EntityWrench  -p "entity: {name: 'faux_box::base_link', type: LINK}, wrench: {force: {y: -1000}, torque: {x: 0}}" -->
+    <!-- gz topic -t "/world/multi_drone_slung_load/wrench/clear" -m gz.msgs.Entity  -p "name: 'faux_box::base_link', type: LINK" -->
+
     <gui fullscreen='false'>
       <plugin name='3D View' filename='GzScene3D'>
         <gz-gui>
