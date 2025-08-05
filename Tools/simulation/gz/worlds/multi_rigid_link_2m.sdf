@@ -12,8 +12,8 @@
     <plugin name='ignition::gazebo::systems::Contact' filename='ignition-gazebo-contact-system'/>
     <plugin name='ignition::gazebo::systems::ApplyLinkWrench' filename='ignition-gazebo-apply-link-wrench-system'/>
     <plugin name='ignition::gazebo::systems::Imu' filename='ignition-gazebo-imu-system'/>
+    <!-- <plugin name='ignition::gazebo::systems::ForceTorque' filename='ignition-gazebo-forcetorque-system'/> -->
     <plugin name='ignition::gazebo::systems::AirPressure' filename='ignition-gazebo-air-pressure-system'/>
-    <plugin name='ignition::gazebo::systems::ForceTorque' filename='ignition-gazebo-forcetorque-system'/>
     <!-- <plugin name="sim_rigid_cable_plugin" filename="sim_rigid_cable_plugin"/> -->
     <plugin name='ignition::gazebo::systems::Sensors' filename='ignition-gazebo-sensors-system'>
       <render_engine>ogre2</render_engine>
@@ -194,7 +194,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_1</name>
-        <pose>1.5 0 .24 0 0 3.141592654</pose>
+        <pose>1.621 0 .24 0 0 3.141592654</pose>
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
@@ -206,7 +206,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_2</name>
-        <pose>-0.75 1.299 .24 0 0 0</pose>
+        <pose>-0.810 1.404 .24 0 0 0</pose>
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
@@ -218,7 +218,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_3</name>
-        <pose>-0.75 -1.299 .24 0 0 0</pose>
+        <pose>-0.810 -1.404 .24 0 0 0</pose>
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
@@ -262,14 +262,14 @@
         <child>x500_1::base_link</child>
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
 
-        <sensor name="ft_sensor" type="force_torque">
+        <!-- <sensor name="ft_sensor" type="force_torque">
           <always_on>true</always_on>
           <update_rate>100</update_rate>
           <force_torque>
             <frame>child</frame>
             <measure_direction>child_to_parent</measure_direction>
-          </force_torque>
-        </sensor>
+          </force_torque> 
+        </sensor>-->
       </joint>
 
 
@@ -286,14 +286,14 @@
         <child>x500_2::base_link</child>
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
 
-        <sensor name="ft_sensor" type="force_torque">
+        <!-- <sensor name="ft_sensor" type="force_torque">
           <always_on>true</always_on>
           <update_rate>100</update_rate>
           <force_torque>
             <frame>child</frame>
             <measure_direction>child_to_parent</measure_direction>
           </force_torque>
-        </sensor>
+        </sensor> -->
       </joint>
 
 
@@ -310,14 +310,14 @@
         <child>x500_3::base_link</child>
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
 
-        <sensor name="ft_sensor" type="force_torque">
+        <!-- <sensor name="ft_sensor" type="force_torque">
           <always_on>true</always_on>
           <update_rate>100</update_rate>
           <force_torque>
             <frame>child</frame>
             <measure_direction>child_to_parent</measure_direction>
           </force_torque>
-        </sensor>
+        </sensor> -->
       </joint>
 
     </model>
