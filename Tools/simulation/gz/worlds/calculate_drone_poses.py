@@ -3,7 +3,7 @@ import numpy as np
 # Also see: multi_drone_slung_load's generate_spawn_points.py (does yaws too)
 
 
-def generate_points_circle(n_points, radius):
+def generate_points_circle(n_points, radius, offset_x=0.0):
     """
     Generate a list of 2D points that lie on a circle.
     
@@ -18,7 +18,7 @@ def generate_points_circle(n_points, radius):
     
     for i in range(n_points):
         angle = i * 2 * np.pi / n_points
-        x = radius*np.cos(angle)
+        x = radius*np.cos(angle) + np.sign(np.cos(angle))*offset_x
         y = radius*np.sin(angle)
         points.append((x, y))
     
@@ -69,14 +69,18 @@ rotation_angle = 0
 
 # Drones rel load
 n_points = 3
-r_drones = 1.621 #1.621 (2.38 m cable) 2.1 (3.13 m cable) #1.5 (2.19 m cable) #m
+r_drones = 1.645 #1.645 (2.4171 m cable) 1.635 (2.40147 m cable) 1.65 (2.425 m cable) 1.625 (2.3858 m cable) 1.621 (2.37957 m cable) 2.1 (3.13 m cable) #1.5 (2.19 m cable) #m
 
 # Tether placement
 r_tethers = 0.1 #m
 
+d_tether_from_drone_com_x = 0.04
+
+## ADD OFFSETS
+#r_drones += d_tether_from_drone_com # Offset to account for the distance from drone COM to tether placement point
 
 ## GENERATE POINTS
-points_drones = generate_points_circle(n_points, r_drones)
+points_drones = generate_points_circle(n_points, r_drones, offset_x=d_tether_from_drone_com_x) # Generate points around the load pose
 transformed_points_drones = transform_points(points_drones, translation, rotation_angle) # Transform points to surround the desired load pose
 
 # Generate tether placement points

@@ -57,29 +57,29 @@
     <link name='element_1'>
       <pose relative_to='joint_0_to_1'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <mass>0.002</mass>
         <inertia>
-          <ixx>9.4856551571353079e-06</ixx>
+          <ixx>9.7857765992134276e-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>9.4856551571353079e-06</iyy>
+          <iyy>9.7857765992134276e-06</iyy>
           <iyz>0</iyz>
           <izz>9.9999999999999995e-08</izz>
         </inertia>
       </inertial>
       <visual name='element_1_visual'>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.23793682132619121</length>
+            <length>0.24169124848715681</length>
             <radius>0.01</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_1_to_2' type='universal'>
-      <pose relative_to='element_1'>0.23793682132619121 0 0 0 -0.31415926535897948 0</pose>
+      <pose relative_to='element_1'>0.24169124848715681 0 0 0 -0.31415926535897948 0</pose>
       <parent>element_1</parent>
       <child>element_2</child>
       <axis>
@@ -112,29 +112,29 @@
     <link name='element_2'>
       <pose relative_to='joint_1_to_2'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <mass>0.002</mass>
         <inertia>
-          <ixx>9.4856551571353079e-06</ixx>
+          <ixx>9.7857765992134276e-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>9.4856551571353079e-06</iyy>
+          <iyy>9.7857765992134276e-06</iyy>
           <iyz>0</iyz>
           <izz>9.9999999999999995e-08</izz>
         </inertia>
       </inertial>
       <visual name='element_2_visual'>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.23793682132619121</length>
+            <length>0.24169124848715681</length>
             <radius>0.01</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_2_to_3' type='universal'>
-      <pose relative_to='element_2'>0.23793682132619121 0 0 0 -0.31415926535897948 0</pose>
+      <pose relative_to='element_2'>0.24169124848715681 0 0 0 -0.31415926535897948 0</pose>
       <parent>element_2</parent>
       <child>element_3</child>
       <axis>
@@ -167,29 +167,29 @@
     <link name='element_3'>
       <pose relative_to='joint_2_to_3'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <mass>0.002</mass>
         <inertia>
-          <ixx>9.4856551571353079e-06</ixx>
+          <ixx>9.7857765992134276e-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>9.4856551571353079e-06</iyy>
+          <iyy>9.7857765992134276e-06</iyy>
           <iyz>0</iyz>
           <izz>9.9999999999999995e-08</izz>
         </inertia>
       </inertial>
       <visual name='element_3_visual'>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.23793682132619121</length>
+            <length>0.24169124848715681</length>
             <radius>0.01</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_3_to_4' type='universal'>
-      <pose relative_to='element_3'>0.23793682132619121 0 0 0 -0.31415926535897948 0</pose>
+      <pose relative_to='element_3'>0.24169124848715681 0 0 0 -0.31415926535897948 0</pose>
       <parent>element_3</parent>
       <child>element_4</child>
       <axis>
@@ -222,29 +222,29 @@
     <link name='element_4'>
       <pose relative_to='joint_3_to_4'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <mass>0.002</mass>
         <inertia>
-          <ixx>9.4856551571353079e-06</ixx>
+          <ixx>9.7857765992134276e-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>9.4856551571353079e-06</iyy>
+          <iyy>9.7857765992134276e-06</iyy>
           <iyz>0</iyz>
           <izz>9.9999999999999995e-08</izz>
         </inertia>
       </inertial>
       <visual name='element_4_visual'>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.23793682132619121</length>
+            <length>0.24169124848715681</length>
             <radius>0.01</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_4_to_5' type='universal'>
-      <pose relative_to='element_4'>0.23793682132619121 0 0 0 -0.31415926535897948 0</pose>
+      <pose relative_to='element_4'>0.24169124848715681 0 0 0 -0.31415926535897948 0</pose>
       <parent>element_4</parent>
       <child>element_5</child>
       <axis>
@@ -277,29 +277,29 @@
     <link name='element_5'>
       <pose relative_to='joint_4_to_5'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <mass>0.002</mass>
         <inertia>
-          <ixx>9.4856551571353079e-06</ixx>
+          <ixx>9.7857765992134276e-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>9.4856551571353079e-06</iyy>
+          <iyy>9.7857765992134276e-06</iyy>
           <iyz>0</iyz>
           <izz>9.9999999999999995e-08</izz>
         </inertia>
       </inertial>
       <visual name='element_5_visual'>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.23793682132619121</length>
+            <length>0.24169124848715681</length>
             <radius>0.01</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_5_to_6' type='universal'>
-      <pose relative_to='element_5'>0.23793682132619121 0 0 0 -0.31415926535897948 0</pose>
+      <pose relative_to='element_5'>0.24169124848715681 0 0 0 -0.31415926535897948 0</pose>
       <parent>element_5</parent>
       <child>element_6</child>
       <axis>
@@ -332,29 +332,29 @@
     <link name='element_6'>
       <pose relative_to='joint_5_to_6'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <mass>0.002</mass>
         <inertia>
-          <ixx>9.4856551571353079e-06</ixx>
+          <ixx>9.7857765992134276e-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>9.4856551571353079e-06</iyy>
+          <iyy>9.7857765992134276e-06</iyy>
           <iyz>0</iyz>
           <izz>9.9999999999999995e-08</izz>
         </inertia>
       </inertial>
       <visual name='element_6_visual'>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.23793682132619121</length>
+            <length>0.24169124848715681</length>
             <radius>0.01</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_6_to_7' type='universal'>
-      <pose relative_to='element_6'>0.23793682132619121 0 0 0 -0.31415926535897948 0</pose>
+      <pose relative_to='element_6'>0.24169124848715681 0 0 0 -0.31415926535897948 0</pose>
       <parent>element_6</parent>
       <child>element_7</child>
       <axis>
@@ -387,29 +387,29 @@
     <link name='element_7'>
       <pose relative_to='joint_6_to_7'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <mass>0.002</mass>
         <inertia>
-          <ixx>9.4856551571353079e-06</ixx>
+          <ixx>9.7857765992134276e-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>9.4856551571353079e-06</iyy>
+          <iyy>9.7857765992134276e-06</iyy>
           <iyz>0</iyz>
           <izz>9.9999999999999995e-08</izz>
         </inertia>
       </inertial>
       <visual name='element_7_visual'>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.23793682132619121</length>
+            <length>0.24169124848715681</length>
             <radius>0.01</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_7_to_8' type='universal'>
-      <pose relative_to='element_7'>0.23793682132619121 0 0 0 -0.31415926535897948 0</pose>
+      <pose relative_to='element_7'>0.24169124848715681 0 0 0 -0.31415926535897948 0</pose>
       <parent>element_7</parent>
       <child>element_8</child>
       <axis>
@@ -442,29 +442,29 @@
     <link name='element_8'>
       <pose relative_to='joint_7_to_8'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <mass>0.002</mass>
         <inertia>
-          <ixx>9.4856551571353079e-06</ixx>
+          <ixx>9.7857765992134276e-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>9.4856551571353079e-06</iyy>
+          <iyy>9.7857765992134276e-06</iyy>
           <iyz>0</iyz>
           <izz>9.9999999999999995e-08</izz>
         </inertia>
       </inertial>
       <visual name='element_8_visual'>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.23793682132619121</length>
+            <length>0.24169124848715681</length>
             <radius>0.01</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_8_to_9' type='universal'>
-      <pose relative_to='element_8'>0.23793682132619121 0 0 0 -0.31415926535897948 0</pose>
+      <pose relative_to='element_8'>0.24169124848715681 0 0 0 -0.31415926535897948 0</pose>
       <parent>element_8</parent>
       <child>element_9</child>
       <axis>
@@ -497,29 +497,29 @@
     <link name='element_9'>
       <pose relative_to='joint_8_to_9'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <mass>0.002</mass>
         <inertia>
-          <ixx>9.4856551571353079e-06</ixx>
+          <ixx>9.7857765992134276e-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>9.4856551571353079e-06</iyy>
+          <iyy>9.7857765992134276e-06</iyy>
           <iyz>0</iyz>
           <izz>9.9999999999999995e-08</izz>
         </inertia>
       </inertial>
       <visual name='element_9_visual'>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.23793682132619121</length>
+            <length>0.24169124848715681</length>
             <radius>0.01</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_9_to_10' type='universal'>
-      <pose relative_to='element_9'>0.23793682132619121 0 0 0 -0.31415926535897948 0</pose>
+      <pose relative_to='element_9'>0.24169124848715681 0 0 0 -0.31415926535897948 0</pose>
       <parent>element_9</parent>
       <child>element_10</child>
       <axis>
@@ -552,29 +552,29 @@
     <link name='element_10'>
       <pose relative_to='joint_9_to_10'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <mass>0.002</mass>
         <inertia>
-          <ixx>9.4856551571353079e-06</ixx>
+          <ixx>9.7857765992134276e-06</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>9.4856551571353079e-06</iyy>
+          <iyy>9.7857765992134276e-06</iyy>
           <iyz>0</iyz>
           <izz>9.9999999999999995e-08</izz>
         </inertia>
       </inertial>
       <visual name='element_10_visual'>
-        <pose>0.1189684106630956 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.12084562424357841 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.23793682132619121</length>
+            <length>0.24169124848715681</length>
             <radius>0.01</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_10_to_11' type='universal'>
-      <pose relative_to='element_10'>0.23793682132619121 0 0 0 1.4137166941154073 0</pose>
+      <pose relative_to='element_10'>0.24169124848715681 0 0 0 1.4137166941154073 0</pose>
       <parent>element_10</parent>
       <child>element_last</child>
       <axis>

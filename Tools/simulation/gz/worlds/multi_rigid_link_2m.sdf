@@ -194,7 +194,8 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_1</name>
-        <pose>1.621 0 .24 0 0 3.141592654</pose>
+        <pose>1.685 0 .24 0 0 3.141592654</pose>
+        <!-- <pose>1.621 0 .24 0 0 3.141592654</pose> -->
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
@@ -206,7 +207,8 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_2</name>
-        <pose>-0.810 1.404 .24 0 0 0</pose>
+        <pose>-0.8625 1.4246 .24 0 0 0</pose>
+        <!-- <pose>-0.810 1.404 .24 0 0 0</pose> -->
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
@@ -218,7 +220,8 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_3</name>
-        <pose>-0.810 -1.404 .24 0 0 0</pose>
+        <pose>-0.8625 -1.4246 .24 0 0 0</pose>
+        <!-- <pose>-0.810 -1.404 .24 0 0 0</pose> -->
 
         <!-- <experimental:params>
           <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
@@ -278,7 +281,7 @@
         <parent>load::base_link</parent>
         <child>tether_2::element_first</child>
         <!-- <pose>-0.04 0.069 0.1 0.0 0.0 0.0</pose> -->
-        <pose>-0.05 0.087 0.03 0.0 0.0 0.0</pose>
+        <pose>-0.05 0.0866 0.03 0.0 0.0 0.0</pose>
       </joint>
 
       <joint name="joint_tether_2_drone_2" type="fixed">
@@ -301,7 +304,7 @@
       <joint name="joint_load_tether_3" type="fixed">
         <parent>load::base_link</parent>
         <child>tether_3::element_first</child>
-        <pose>-0.05 -0.087 0.03 0.0 0.0 0.0</pose>
+        <pose>-0.05 -0.0866 0.03 0.0 0.0 0.0</pose>
         <!-- <pose>-0.04 -0.069 0.1 0.0 0.0 0.0</pose> -->
       </joint>
 

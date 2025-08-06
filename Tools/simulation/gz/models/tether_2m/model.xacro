@@ -6,7 +6,7 @@
     These changes are now all defined in generate_sdf.sh-->
 
     <!-- Define properties -->
-    <xacro:property name="dist_connect_points" value="1.521" /> 
+    <xacro:property name="dist_connect_points" value="1.545" /> 
     <xacro:property name="tether_radius" value="0.01" />
     <xacro:property name="tether_mass" value="0.02" /> 
     <xacro:property name="num_elements" value="10" /> 

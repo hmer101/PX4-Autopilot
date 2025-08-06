@@ -7,14 +7,14 @@
       <!-- <pose>0 0 0.1 0 -0 3.141592654</pose> -->
       <link name='base_link'>
         <inertial>
-          <mass>1.6868</mass>
+          <mass>1.66</mass>
           <inertia>
-            <ixx>0.011747367</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.015939207</iyy>
-            <iyz>0</iyz>
-            <izz>0.0210</izz>
+            <ixx>0.01012744</ixx>
+            <ixy>0.00032783</ixy>
+            <ixz>-0.00005574</ixz>
+            <iyy>0.01368186</iyy>
+            <iyz>-0.00036733</iyz>
+            <izz>0.02099692</izz>
           </inertia>
           <pose>0 0 0 0 0 3.141592654</pose>
           <!-- <pose>0 0 0.1 0 -0 3.141592654</pose> -->
