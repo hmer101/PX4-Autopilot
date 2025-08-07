@@ -16,7 +16,7 @@
             <iyz>-0.00036733</iyz>
             <izz>0.02099692</izz>
           </inertia>
-          <pose>0 0 0 0 0 3.141592654</pose>
+          <pose>0.00106 0.00556 -0.0061 0 0 3.141592654</pose>
           <!-- <pose>0 0 0.1 0 -0 3.141592654</pose> -->
         </inertial>
         <collision name='collision'>

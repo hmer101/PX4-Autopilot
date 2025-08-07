@@ -194,7 +194,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_1</name>
-        <pose>1.685 0 .24 0 0 3.141592654</pose>
+        <pose>1.6875 0 .24 0 0 3.141592654</pose>
         <!-- <pose>1.621 0 .24 0 0 3.141592654</pose> -->
 
         <!-- <experimental:params>
@@ -207,7 +207,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_2</name>
-        <pose>-0.8625 1.4246 .24 0 0 0</pose>
+        <pose>-0.86375 1.42678 .24 0 0 0</pose>
         <!-- <pose>-0.810 1.404 .24 0 0 0</pose> -->
 
         <!-- <experimental:params>
@@ -220,7 +220,7 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_3</name>
-        <pose>-0.8625 -1.4246 .24 0 0 0</pose>
+        <pose>-0.86375 -1.42678 .24 0 0 0</pose>
         <!-- <pose>-0.810 -1.404 .24 0 0 0</pose> -->
 
         <!-- <experimental:params>

@@ -6,10 +6,9 @@
     These changes are now all defined in generate_sdf.sh-->
 
     <!-- Define properties -->
-    <!-- <xacro:property name="dist_connect_points" value="1.5475" />  -->
+    <xacro:property name="dist_connect_points" value="1.5475" /> 
     <xacro:property name="tether_radius" value="0.0031" />
-    <xacro:property name="tether_mass" value="0.02" />
-    <xacro:property name="tether_length" value="2.4210" /> 
+    <xacro:property name="tether_mass" value="0.02" /> 
     <xacro:property name="num_elements" value="10" /> 
 
     <xacro:property name="elem_length_ends" value="0.0001" />
@@ -22,8 +21,7 @@
     <!-- Calculations -->
     <xacro:property name="ang_e" value="${pi/num_elements}"/>
     <xacro:property name="ang_i" value="${pi - ang_e}"/>
-    <xacro:property name="elem_length_main" value="${tether_length/num_elements}"/>
-    <xacro:property name="dist_connect_points" value="${elem_length_main/sin(pi/(2*num_elements))}"/>
+    <xacro:property name="elem_length_main" value="${(((dist_connect_points**2)/2)*(1-cos(ang_e)))**0.5}"/>
 
     <!-- Define link macro -->
     <xacro:macro name="tether_element" params="elem_name elem_length elem_mass">
