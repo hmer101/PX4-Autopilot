@@ -11,7 +11,7 @@ elem_mass_ends: 0.0001 # kg
 joint_2_axis: "0 0 1"
 
 # Properties to tune
-num_elements: 10
+num_elements: 10 #20 #15 #10
 
 joint_friction: 0 # N*m
 joint_damping: 0.01 # Ns/m

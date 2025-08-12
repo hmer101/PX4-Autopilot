@@ -221,7 +221,9 @@ def main():
 
     # Calculate distance between connection points
     distance_connection_points = calculate_distance_connection_points(elem_length_main, num_elements)
-    print(f"Distance between connection points: {distance_connection_points}")
+    print(f"Cable length: {elem_length_main* num_elements} m")
+    print(f"Distance between connection points: {distance_connection_points} m")
+
 
     ### 3. UPDATE DRONE AND TETHER POSES IN WORLD SDF ###
     print("3. Update drone and tether poses in world SDF")
