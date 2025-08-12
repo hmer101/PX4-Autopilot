@@ -1,28 +1,29 @@
-<sdf version="1.9">
-  <world name="multi_drone_slung_load">
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version='1.9'>
+  <world name='multi_drone_slung_load'>
     <physics type="ode">
       <max_step_size>0.004</max_step_size>
-      <real_time_factor>1.0</real_time_factor> 
-      <real_time_update_rate>250</real_time_update_rate> 
+      <real_time_factor>1.0</real_time_factor> <!--1.0-->
+      <real_time_update_rate>250</real_time_update_rate> <!--250-->
     </physics>
-    <plugin name="ignition::gazebo::systems::Physics" filename="ignition-gazebo-physics-system" />
-    <plugin name="ignition::gazebo::systems::UserCommands" filename="ignition-gazebo-user-commands-system" />
-    <plugin name="ignition::gazebo::systems::SceneBroadcaster" filename="ignition-gazebo-scene-broadcaster-system" />
-    <plugin name="ignition::gazebo::systems::Contact" filename="ignition-gazebo-contact-system" />
-    <plugin name="ignition::gazebo::systems::ApplyLinkWrench" filename="ignition-gazebo-apply-link-wrench-system" />
-    <plugin name="ignition::gazebo::systems::Imu" filename="ignition-gazebo-imu-system" />
-    
-    <plugin name="ignition::gazebo::systems::AirPressure" filename="ignition-gazebo-air-pressure-system" />
-    
-    <plugin name="ignition::gazebo::systems::Sensors" filename="ignition-gazebo-sensors-system">
+    <plugin name='ignition::gazebo::systems::Physics' filename='ignition-gazebo-physics-system'/>
+    <plugin name='ignition::gazebo::systems::UserCommands' filename='ignition-gazebo-user-commands-system'/>
+    <plugin name='ignition::gazebo::systems::SceneBroadcaster' filename='ignition-gazebo-scene-broadcaster-system'/>
+    <plugin name='ignition::gazebo::systems::Contact' filename='ignition-gazebo-contact-system'/>
+    <plugin name='ignition::gazebo::systems::ApplyLinkWrench' filename='ignition-gazebo-apply-link-wrench-system'/>
+    <plugin name='ignition::gazebo::systems::Imu' filename='ignition-gazebo-imu-system'/>
+    <!-- <plugin name='ignition::gazebo::systems::ForceTorque' filename='ignition-gazebo-forcetorque-system'/> -->
+    <plugin name='ignition::gazebo::systems::AirPressure' filename='ignition-gazebo-air-pressure-system'/>
+    <!-- <plugin name="sim_rigid_cable_plugin" filename="sim_rigid_cable_plugin"/> -->
+    <plugin name='ignition::gazebo::systems::Sensors' filename='ignition-gazebo-sensors-system'>
       <render_engine>ogre2</render_engine>
     </plugin>
-    <gui fullscreen="false">
-      <plugin name="3D View" filename="GzScene3D">
+    <gui fullscreen='false'>
+      <plugin name='3D View' filename='GzScene3D'>
         <ignition-gui>
           <title>3D View</title>
-          <property type="bool" key="showTitleBar">0</property>
-          <property type="string" key="state">docked</property>
+          <property type='bool' key='showTitleBar'>0</property>
+          <property type='string' key='state'>docked</property>
         </ignition-gui>
         <engine>ogre2</engine>
         <scene>scene</scene>
@@ -30,36 +31,36 @@
         <background_color>0.8984631152222222 0.8984631152222222 0.8984631152222222</background_color>
         <camera_pose>-6 0 6 0 0.5 0</camera_pose>
       </plugin>
-      <plugin name="World control" filename="WorldControl">
+      <plugin name='World control' filename='WorldControl'>
         <ignition-gui>
           <title>World control</title>
-          <property type="bool" key="showTitleBar">0</property>
-          <property type="bool" key="resizable">0</property>
-          <property type="double" key="height">72</property>
-          <property type="double" key="width">121</property>
-          <property type="double" key="z">1</property>
-          <property type="string" key="state">floating</property>
-          <anchors target="3D View">
-            <line own="left" target="left" />
-            <line own="bottom" target="bottom" />
+          <property type='bool' key='showTitleBar'>0</property>
+          <property type='bool' key='resizable'>0</property>
+          <property type='double' key='height'>72</property>
+          <property type='double' key='width'>121</property>
+          <property type='double' key='z'>1</property>
+          <property type='string' key='state'>floating</property>
+          <anchors target='3D View'>
+            <line own='left' target='left'/>
+            <line own='bottom' target='bottom'/>
           </anchors>
         </ignition-gui>
         <play_pause>1</play_pause>
         <step>1</step>
         <start_paused>1</start_paused>
       </plugin>
-      <plugin name="World stats" filename="WorldStats">
+      <plugin name='World stats' filename='WorldStats'>
         <ignition-gui>
           <title>World stats</title>
-          <property type="bool" key="showTitleBar">0</property>
-          <property type="bool" key="resizable">0</property>
-          <property type="double" key="height">110</property>
-          <property type="double" key="width">290</property>
-          <property type="double" key="z">1</property>
-          <property type="string" key="state">floating</property>
-          <anchors target="3D View">
-            <line own="right" target="right" />
-            <line own="bottom" target="bottom" />
+          <property type='bool' key='showTitleBar'>0</property>
+          <property type='bool' key='resizable'>0</property>
+          <property type='double' key='height'>110</property>
+          <property type='double' key='width'>290</property>
+          <property type='double' key='z'>1</property>
+          <property type='string' key='state'>floating</property>
+          <anchors target='3D View'>
+            <line own='right' target='right'/>
+            <line own='bottom' target='bottom'/>
           </anchors>
         </ignition-gui>
         <sim_time>1</sim_time>
@@ -67,21 +68,21 @@
         <real_time_factor>1</real_time_factor>
         <iterations>1</iterations>
       </plugin>
-      <plugin name="Entity tree" filename="EntityTree" />
+      <plugin name='Entity tree' filename='EntityTree'/>
     </gui>
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
-    <atmosphere type="adiabatic" />
+    <atmosphere type='adiabatic'/>
     <scene>
       <grid>false</grid>
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
       <shadows>true</shadows>
     </scene>
-    <model name="ground_plane">
+    <model name='ground_plane'>
       <static>true</static>
-      <link name="link">
-        <collision name="collision">
+      <link name='link'>
+        <collision name='collision'>
           <geometry>
             <plane>
               <normal>0 0 1</normal>
@@ -90,13 +91,13 @@
           </geometry>
           <surface>
             <friction>
-              <ode />
+              <ode/>
             </friction>
-            <bounce />
-            <contact />
+            <bounce/>
+            <contact/>
           </surface>
         </collision>
-        <visual name="visual">
+        <visual name='visual'>
           <geometry>
             <plane>
               <normal>0 0 1</normal>
@@ -127,7 +128,7 @@
       <pose>0 0 0 0 -0 0</pose>
       <self_collide>false</self_collide>
     </model>
-    <light name="sunUTC" type="directional">
+    <light name='sunUTC' type='directional'>
       <pose>0 0 500 0 -0 0</pose>
       <cast_shadows>true</cast_shadows>
       <intensity>1</intensity>
@@ -147,10 +148,10 @@
       </spot>
     </light>
 
-    <model name="swarm">
-      
-      
-      <link name="ref">
+    <model name='swarm'>
+      <!-- <static>false</static> -->
+      <!-- Add dummy "reference link" -->
+      <link name='ref'>
         <inertial>
           <pose>10 10 0 0 0 0</pose>
           <mass>1000000</mass>
@@ -163,7 +164,7 @@
             <izz>1</izz>
           </inertia>
         </inertial>
-        <collision name="ref_collision">
+        <collision name='ref_collision'>
           <pose>10 10 0.5 0 0 0</pose>
           <geometry>
             <cylinder>
@@ -172,7 +173,7 @@
             </cylinder>
           </geometry>
         </collision>
-        <visual name="ref_visual">
+        <visual name='ref_visual'>
           <pose>10 10 0.5 0 0 0</pose>
           <geometry>
             <cylinder>
@@ -183,7 +184,7 @@
         </visual>
       </link>
 
-      
+      <!-- SPAWN POINT 1 -->
       <include>
         <uri>aruco_box</uri>
         <name>load</name>
@@ -193,58 +194,70 @@
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_1</name>
-        <pose>1.6876129249250682 0.0 .24 0 0 3.141592654</pose>
-        
+        <pose>1.6876 0 .24 0 0 3.141592654</pose>
+        <!-- <pose>1.621 0 .24 0 0 3.141592654</pose> -->
 
-        
+        <!-- <experimental:params>
+          <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
+            <topic>px4_1/out/camera</topic>
+          </sensor>
+        </experimental:params> -->
       </include>
 
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_2</name>
-        <pose>-0.8638064624625338 1.4268746485886923 .24 0 0 0</pose>
-        
+        <pose>-0.86380 1.42686 .24 0 0 0</pose>
+        <!-- <pose>-0.810 1.404 .24 0 0 0</pose> -->
 
-        
+        <!-- <experimental:params>
+          <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
+            <topic>px4_2/out/camera</topic>
+          </sensor>
+        </experimental:params> -->
       </include>
 
       <include>
         <uri>x500_camera_down</uri>
         <name>x500_3</name>
-        <pose>-0.8638064624625349 -1.4268746485886916 .24 0 0 0</pose>
-        
+        <pose>-0.8638 -1.42686 .24 0 0 0</pose>
+        <!-- <pose>-0.810 -1.404 .24 0 0 0</pose> -->
 
-        
+        <!-- <experimental:params>
+          <sensor element_id="OakD-Lite/base_link::IMX214" action="modify">
+            <topic>px4_3/out/camera</topic>
+          </sensor>
+        </experimental:params> -->
       </include>
 
 
       <include>
         <uri>tether_2m</uri>
         <name>tether_1</name>
-        <pose>0.1 0.0 .2 0 0 0</pose>
+        <pose>0.1 0 .2 0 0 0</pose>
       </include>
 
       <include>
         <uri>tether_2m</uri>
         <name>tether_2</name>
-        <pose>-0.04999999999999998 0.08660254037844388 .2 0 0 2.09439510239</pose>
+        <pose>-0.05 0.0866 .2 0 0 2.09439510239</pose>
       </include>
 
       <include>
         <uri>tether_2m</uri>
         <name>tether_3</name>
-        <pose>-0.050000000000000044 -0.08660254037844384 .2 0 0 4.18879020479</pose>
+        <pose>-0.05 -0.0866 .2 0 0 4.18879020479</pose>
       </include>
 
 
-      
-      
-      
+      <!-- CONNECTIONS -->
+      <!-- Tether 1 -->
+      <!-- (Changing joint locations doesn't change any visual placement of objects) -->
       <joint name="joint_load_tether_1" type="fixed">
         <parent>load::base_link</parent>
         <child>tether_1::element_first</child>
         <pose>0.1 0.0 0.03 0.0 0.0 0.0</pose> 
-        
+        <!-- <pose>0.08 0.0 0.03 0.0 0.0 0.0</pose> -->
       </joint>
 
       <joint name="joint_tether_1_drone_1" type="fixed">
@@ -252,15 +265,22 @@
         <child>x500_1::base_link</child>
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
 
-        
+        <!-- <sensor name="ft_sensor" type="force_torque">
+          <always_on>true</always_on>
+          <update_rate>100</update_rate>
+          <force_torque>
+            <frame>child</frame>
+            <measure_direction>child_to_parent</measure_direction>
+          </force_torque> 
+        </sensor>-->
       </joint>
 
 
-      
+      <!-- Tether 2 -->
       <joint name="joint_load_tether_2" type="fixed">
         <parent>load::base_link</parent>
         <child>tether_2::element_first</child>
-        
+        <!-- <pose>-0.04 0.069 0.1 0.0 0.0 0.0</pose> -->
         <pose>-0.05 0.0866 0.03 0.0 0.0 0.0</pose>
       </joint>
 
@@ -269,16 +289,23 @@
         <child>x500_2::base_link</child>
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
 
-        
+        <!-- <sensor name="ft_sensor" type="force_torque">
+          <always_on>true</always_on>
+          <update_rate>100</update_rate>
+          <force_torque>
+            <frame>child</frame>
+            <measure_direction>child_to_parent</measure_direction>
+          </force_torque>
+        </sensor> -->
       </joint>
 
 
-      
+      <!-- Tether 3 -->
       <joint name="joint_load_tether_3" type="fixed">
         <parent>load::base_link</parent>
         <child>tether_3::element_first</child>
         <pose>-0.05 -0.0866 0.03 0.0 0.0 0.0</pose>
-        
+        <!-- <pose>-0.04 -0.069 0.1 0.0 0.0 0.0</pose> -->
       </joint>
 
       <joint name="joint_tether_3_drone_3" type="fixed">
@@ -286,12 +313,23 @@
         <child>x500_3::base_link</child>
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
 
-        
+        <!-- <sensor name="ft_sensor" type="force_torque">
+          <always_on>true</always_on>
+          <update_rate>100</update_rate>
+          <force_torque>
+            <frame>child</frame>
+            <measure_direction>child_to_parent</measure_direction>
+          </force_torque>
+        </sensor> -->
       </joint>
 
     </model>
 
-    
+    <!-- <include>
+      <uri>faux_box</uri>
+      <name>faux_box</name>
+      <pose>0 0 0.17 0 0 0</pose> 
+    </include> -->
 
   </world>
 </sdf>

@@ -7,16 +7,16 @@
 
     <!-- Define properties -->
     <!-- <xacro:property name="dist_connect_points" value="1.5475" />  -->
-    <xacro:property name="cable_radius" value="0.0031" />
-    <xacro:property name="cable_mass" value="0.02" />
-    <xacro:property name="cable_length" value="2.421" />
-    <xacro:property name="num_elements" value="10" />
-    <xacro:property name="elem_length_ends" value="0.0001" />
-    <xacro:property name="elem_mass_ends" value="0.0001" />
+    <xacro:property name="cable_radius" value="${cable_radius}" />
+    <xacro:property name="cable_mass" value="${cable_mass}" />
+    <xacro:property name="cable_length" value="${cable_length}" />
+    <xacro:property name="num_elements" value="${num_elements}" />
+    <xacro:property name="elem_length_ends" value="${elem_length_ends}" />
+    <xacro:property name="elem_mass_ends" value="${elem_mass_ends}" />
 
     <!-- Joint properties -->
-    <xacro:property name="joint_friction" value="0" />
-    <xacro:property name="joint_damping" value="0.01" />
+    <xacro:property name="joint_friction" value="${joint_friction}" />
+    <xacro:property name="joint_damping" value="${joint_damping}" />
 
     <!-- Calculations -->
     <xacro:property name="elem_mass_main" value="${cable_mass/num_elements}" />
@@ -37,13 +37,13 @@
             <visual>
                 <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
                 <geometry>
-                    <cylinder length="${elem_length}" radius="0.0031"/>
+                    <cylinder length="${elem_length}" radius="${cable_radius}"/>
                 </geometry>
             </visual>
             <!-- <collision>
                 <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
                 <geometry>
-                    <cylinder length="${elem_length}" radius="0.0031"/> 0.0001
+                    <cylinder length="${elem_length}" radius="${cable_radius}"/> 0.0001
                 </geometry>
             </collision> -->
         </link>
@@ -80,7 +80,7 @@
                 <parent link="element_${elem_num-1}"/>
                 <child link="element_${elem_num}"/>
 
-                <dynamics damping="0.01" friction="0"/>
+                <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
             </joint>
 
         </xacro:if>
@@ -88,25 +88,25 @@
     </xacro:macro>
 
     <!-- Call recursive loop to generate cable -->
-    <xacro:generate_cable elem_num="10" />
+    <xacro:generate_cable elem_num="${num_elements}" />
 
     <!-- Add start and end elements and joints-->
-    <xacro:cable_element elem_name="element_first" elem_length="0.0001" elem_mass="0.0001" />
-    <xacro:cable_element elem_name="element_last" elem_length="0.0001" elem_mass="0.0001" />
+    <xacro:cable_element elem_name="element_first" elem_length="${elem_length_ends}" elem_mass="${elem_mass_ends}" />
+    <xacro:cable_element elem_name="element_last" elem_length="${elem_length_ends}" elem_mass="${elem_mass_ends}" />
 
     <joint name="joint_0_to_1" type="continuous">
         <axis xyz="0. 1. 0."/>
-        <origin xyz="0.0001 0 0" rpy="0 ${ang_i/2} 0"/>
+        <origin xyz="${elem_length_ends} 0 0" rpy="0 ${ang_i/2} 0"/>
         <parent link="element_first"/>
         <child link="element_1"/>
-        <dynamics damping="0.01" friction="0"/>
+        <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
     </joint>
-    <joint name="joint_10_to_${num_elements+1}" type="continuous">
+    <joint name="joint_${num_elements}_to_${num_elements+1}" type="continuous">
         <axis xyz="0. 1. 0."/>
         <origin xyz="${elem_length_main} 0 0" rpy="0 ${(pi-ang_e)/2} 0"/>
-        <parent link="element_10"/>
+        <parent link="element_${num_elements}"/>
         <child link="element_last"/>
-        <dynamics damping="0.01" friction="0"/>
+        <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
     </joint>
 
 </robot>

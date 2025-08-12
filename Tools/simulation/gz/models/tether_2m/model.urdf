@@ -4,9 +4,9 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="tether_2m">
-  <!-- Xacro to generate tether SDF -->
+  <!-- Xacro to generate cable SDF -->
   <!-- Note: need to manually find and replace all references to 'revolute'
-    with 'universal' in final SDF to get better tether. This also involves adding in a second axis.
+    with 'universal' in final SDF to get better cable. This also involves adding in a second axis.
     These changes are now all defined in generate_sdf.sh-->
   <link name="element_10">
     <inertial>
@@ -23,7 +23,7 @@
     <!-- <collision>
                 <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
                 <geometry>
-                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                    <cylinder length="${elem_length}" radius="0.0031"/> 0.0001
                 </geometry>
             </collision> -->
   </link>
@@ -42,7 +42,7 @@
     <!-- <collision>
                 <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
                 <geometry>
-                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                    <cylinder length="${elem_length}" radius="0.0031"/> 0.0001
                 </geometry>
             </collision> -->
   </link>
@@ -61,7 +61,7 @@
     <!-- <collision>
                 <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
                 <geometry>
-                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                    <cylinder length="${elem_length}" radius="0.0031"/> 0.0001
                 </geometry>
             </collision> -->
   </link>
@@ -80,7 +80,7 @@
     <!-- <collision>
                 <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
                 <geometry>
-                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                    <cylinder length="${elem_length}" radius="0.0031"/> 0.0001
                 </geometry>
             </collision> -->
   </link>
@@ -99,7 +99,7 @@
     <!-- <collision>
                 <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
                 <geometry>
-                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                    <cylinder length="${elem_length}" radius="0.0031"/> 0.0001
                 </geometry>
             </collision> -->
   </link>
@@ -118,7 +118,7 @@
     <!-- <collision>
                 <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
                 <geometry>
-                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                    <cylinder length="${elem_length}" radius="0.0031"/> 0.0001
                 </geometry>
             </collision> -->
   </link>
@@ -137,7 +137,7 @@
     <!-- <collision>
                 <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
                 <geometry>
-                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                    <cylinder length="${elem_length}" radius="0.0031"/> 0.0001
                 </geometry>
             </collision> -->
   </link>
@@ -156,7 +156,7 @@
     <!-- <collision>
                 <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
                 <geometry>
-                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                    <cylinder length="${elem_length}" radius="0.0031"/> 0.0001
                 </geometry>
             </collision> -->
   </link>
@@ -175,7 +175,7 @@
     <!-- <collision>
                 <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
                 <geometry>
-                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                    <cylinder length="${elem_length}" radius="0.0031"/> 0.0001
                 </geometry>
             </collision> -->
   </link>
@@ -194,7 +194,7 @@
     <!-- <collision>
                 <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
                 <geometry>
-                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                    <cylinder length="${elem_length}" radius="0.0031"/> 0.0001
                 </geometry>
             </collision> -->
   </link>
@@ -366,7 +366,7 @@
     <!-- <collision>
                 <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
                 <geometry>
-                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                    <cylinder length="${elem_length}" radius="0.0031"/> 0.0001
                 </geometry>
             </collision> -->
   </link>
@@ -385,7 +385,7 @@
     <!-- <collision>
                 <origin xyz="${elem_length/2} 0 0" rpy="0 ${pi/2} 0" />
                 <geometry>
-                    <cylinder length="${elem_length}" radius="${tether_radius}"/> 0.0001
+                    <cylinder length="${elem_length}" radius="0.0031"/> 0.0001
                 </geometry>
             </collision> -->
   </link>
