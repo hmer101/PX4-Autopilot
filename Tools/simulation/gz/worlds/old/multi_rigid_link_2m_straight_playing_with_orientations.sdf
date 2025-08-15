@@ -5,6 +5,7 @@
       <real_time_factor>1.0</real_time_factor> 
       <real_time_update_rate>250</real_time_update_rate> 
     </physics>
+
     <plugin name="ignition::gazebo::systems::Physics" filename="ignition-gazebo-physics-system" />
     <plugin name="ignition::gazebo::systems::UserCommands" filename="ignition-gazebo-user-commands-system" />
     <plugin name="ignition::gazebo::systems::SceneBroadcaster" filename="ignition-gazebo-scene-broadcaster-system" />
@@ -155,12 +156,12 @@
           <pose>10 10 0 0 0 0</pose>
           <mass>1000000</mass>
           <inertia>
-            <ixx>600.5</ixx> 0.0006005
+            <ixx>3.333</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>600.5</iyy> 0.0006005
+            <iyy>3.333</iyy>
             <iyz>0</iyz>
-            <izz>1</izz>
+            <izz>5</izz>
           </inertia>
         </inertial>
         <collision name="ref_collision">
@@ -183,11 +184,45 @@
         </visual>
       </link>
 
+      <link name="box_support">
+        <pose>0 0 0.07 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>100</mass>
+          <inertia>
+            <ixx>4.163</ixx> 
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4.163</iyy> 
+            <iyz>0</iyz>
+            <izz>8</izz>
+          </inertia>
+        </inertial>
+        <collision name="box_support_collision">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.14</length>
+              <radius>0.4</radius>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="box_support_visual">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.14</length>
+              <radius>0.4</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+
       
       <include>
         <uri>aruco_box</uri>
         <name>load</name>
-        <pose>0 0 0.03 0 0 0</pose> 
+        <pose>0 0 0.17 0 0 0</pose> 
       </include>
 
       <include>
@@ -221,20 +256,20 @@
       <include>
         <uri>tether_2m</uri>
         <name>tether_1</name>
-        <pose>0.1 0.0 .06 0 1.51294148979 0</pose> 
+        <pose>0.1 0.0 0.2 0 1.57079632679 0</pose> 
       </include>
 
       <include>
         <uri>tether_2m</uri>
         <name>tether_2</name>
-        <pose>-0.04999999999999998 0.08660254037844388 .06 0 1.51294148979 2.094</pose>
+        <pose>-0.04999999999999998 0.08660254037844388 0.2 0 1.57079632679 2.094</pose>
       </include>
 
       <include>
         <uri>tether_2m</uri>
         <name>tether_3</name>
-        <pose>-0.050000000000000044 -0.08660254037844384 .06 0 1.51294148979 4.1888</pose>
-      </include>
+        <pose>-0.050000000000000044 -0.08660254037844384 0.2 0 1.57079632679 4.1888</pose>
+      </include> 
 
 
       
@@ -287,7 +322,7 @@
         <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
 
         
-      </joint>
+      </joint> 
 
     </model>
 

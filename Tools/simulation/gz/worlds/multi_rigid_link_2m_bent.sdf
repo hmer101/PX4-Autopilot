@@ -187,7 +187,7 @@
       <include>
         <uri>aruco_box</uri>
         <name>load</name>
-        <pose>0 0 0.03 0 0 0</pose> 
+        <pose>0 0 0.17 0 0 0</pose> 
       </include>
 
       <include>
@@ -221,19 +221,19 @@
       <include>
         <uri>tether_2m</uri>
         <name>tether_1</name>
-        <pose>0.1 0.0 .06 0 1.51294148979 0</pose> 
+        <pose>0.1 0.0 .2 0 0 0</pose>
       </include>
 
       <include>
         <uri>tether_2m</uri>
         <name>tether_2</name>
-        <pose>-0.04999999999999998 0.08660254037844388 .06 0 1.51294148979 2.094</pose>
+        <pose>-0.04999999999999998 0.08660254037844388 .2 0 0 2.09439510239</pose>
       </include>
 
       <include>
         <uri>tether_2m</uri>
         <name>tether_3</name>
-        <pose>-0.050000000000000044 -0.08660254037844384 .06 0 1.51294148979 4.1888</pose>
+        <pose>-0.050000000000000044 -0.08660254037844384 .2 0 0 4.18879020479</pose>
       </include>
 
 

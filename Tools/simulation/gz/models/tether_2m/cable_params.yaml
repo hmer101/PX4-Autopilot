@@ -8,11 +8,13 @@ elem_length_ends: 0.0001 # m
 elem_mass_ends: 0.0001 # kg
 
 # Joint properties
-joint_2_axis: "0 0 1"
+joint_1_axis: "0 1 0" # Axis of rotation for joint 1
+joint_2_axis: "0 0 1" # Axis of rotation for joint 2
 
 # Properties to tune
-num_elements: 10 #20 #15 #10
+num_elements: 10 #29 #35 #50 #10 #29 #15 #25 #7 #4
 
-joint_friction: 0 # N*m
-joint_damping: 0.01 # Ns/m
+joint_friction: 5 #0 # N*m
+joint_damping: 0.01 #1 # Ns/m
 joint_stiffness: 0 # N/m
+joint_spring_reference: 0 # equilibrium position of spring

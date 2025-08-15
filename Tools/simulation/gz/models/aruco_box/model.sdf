@@ -3,21 +3,19 @@
 
  <model name='aruco_box'>
       <static>false</static>
-      <pose>0 0 0.03 0 0 3.141592654</pose>
-      <!-- <pose>0 0 0.1 0 -0 3.141592654</pose> -->
+      <!-- <pose>0 0 0.03 0 0 3.141592654</pose> DOES NOTHING -->
       <link name='base_link'>
         <inertial>
           <mass>1.66</mass>
           <inertia>
-            <ixx>0.01012744</ixx>
+            <ixx>0.01019555</ixx>
             <ixy>0.00032783</ixy>
-            <ixz>-0.00005574</ixz>
-            <iyy>0.01368186</iyy>
-            <iyz>-0.00036733</iyz>
+            <ixz>-0.00010803</ixz>
+            <iyy>0.01374997</iyy>
+            <iyz>-0.00032146</iyz>
             <izz>0.02099692</izz>
           </inertia>
-          <pose>0.00106 0.00556 -0.0061 0 0 3.141592654</pose>
-          <!-- <pose>0 0 0.1 0 -0 3.141592654</pose> -->
+          <pose>-0.00106 -0.00556 -0.00581 0 0 3.141592654</pose>
         </inertial>
         <collision name='collision'>
           <geometry>
