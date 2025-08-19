@@ -12,9 +12,66 @@ joint_1_axis: "0 1 0" # Axis of rotation for joint 1
 joint_2_axis: "0 0 1" # Axis of rotation for joint 2
 
 # Properties to tune
-num_elements: 10 #29 #35 #50 #10 #29 #15 #25 #7 #4
+num_elements: 29 #50 #10 #29 #15 #25 #7 #4
 
-joint_friction: 5 #0 # N*m
-joint_damping: 0.01 #1 # Ns/m
-joint_stiffness: 0 # N/m
-joint_spring_reference: 0 # equilibrium position of spring
+joint_friction: 0 # N*m
+joint_damping:  0.0005 #0.002 #0.003 #0.01 # Ns/m # Max step size for straight cable spawn with damping 0.005: 0.00199
+joint_stiffness: 0 #0.05 #0.1 #0.01 #0.001 #0 
+#For straight cable: 0.0035 # Using max step size 0.0015: 0.005 - drones bounce up and over on spawn. 0.0045 (tugs a bit) - max that works on spawn. Also works: 0.0035 (max with no artifacts on spawn), 0.0025 and less (down to 0) # N/m
+joint_1_spring_reference: -0.10833078115 #0 # equilibrium position of spring. -pi/num_elements
+joint_2_spring_reference: 0
+
+
+# For the alternate joints
+joint_interval_k: 2 # e.g. 2 → every 2nd joint
+joint_offset: 1 # e.g. 2 → start from joint 2 (so 2,4,6,…)
+
+joint_k_friction: 0 # N
+joint_k_damping: 0.0005 #0.002 #0.004 #0.003 #0.0025 #0 #0.01 #0 # Ns/m
+joint_k_stiffness: 0 # N/m
+# joint_1_spring_reference_alt: 0 # equilibrium position of spring
+# joint_2_spring_reference_alt: 0
+
+
+# BEST SO FAR (better down lower): 
+# max step size: 0.0019
+# k: 3
+# damping 1: 0.001
+# damping 2: 0.0075
+
+# max step size: 0.0019
+# k: 2
+# damping 1: 0.005
+# damping 2: 0.005
+
+# max step size: 0.0019
+# k: 2
+# damping 1: 0.004
+# damping 2: 0.004
+
+# max step size: 0.0005
+# k: 2
+# damping 1: 0.003
+# damping 2: 0.003
+
+# max step size: 0.0001 (engage)
+# k: 2
+# damping 1: 0.002
+# damping 2: 0.002
+
+# max step size: 0.0001 (engage)
+# k: 2
+# damping 1: 0.001
+# damping 2: 0.001
+
+# Note: 0.0001 - too unstable to even take off at speed. 
+# 0.0005 - damping visually clearly too low on takeoff engage
+
+
+
+
+# For single damping:
+# 0.003 - too small? Goes unstable at 0.0019, and 0.001. Works with max step size 0.0005, but looks too underdamped
+# 0.004 - Works with 0.0019
+# 0.005 - seems ok, might be too large still
+# 0.0075 - too large (works with 0.004 step size though, kind of)

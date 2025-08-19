@@ -3,13 +3,13 @@ set -euo pipefail
 
 # --------- Placeholders (your Python script replaces these later) ---------
 JOINT1_AXIS="0 1 0"
-JOINT1_DAMPING="0.01"
+JOINT1_DAMPING="0.005"
 JOINT1_FRICTION="0"
 JOINT1_SPRING_REFERENCE="0"
 JOINT1_SPRING_STIFFNESS="0"
 
 JOINT2_AXIS="0 0 1"
-JOINT2_DAMPING="0.01"
+JOINT2_DAMPING="0.005"
 JOINT2_FRICTION="0"
 JOINT2_SPRING_REFERENCE="0"
 JOINT2_SPRING_STIFFNESS="0"
@@ -24,9 +24,7 @@ sed -i 's/type='\''revolute'\''/type='\''universal'\''/g; s/type="revolute"/type
 # --------- AXIS 1: replace the ENTIRE <axis>...</axis> with a templated block ----------
 # This hits every original axis (before axis2 exists), so each joint gets a fresh Axis-1.
 perl -0777 -i -pe '
-  s|
-    <axis>\s*.*?\s*</axis>
-  |
+  my $blk = q{
       <axis>
         <xyz>'"$JOINT1_AXIS"'</xyz>
         <limit>
@@ -40,7 +38,8 @@ perl -0777 -i -pe '
           <spring_stiffness>'"$JOINT1_SPRING_STIFFNESS"'</spring_stiffness>
         </dynamics>
       </axis>
-  |gs' model.sdf
+  };
+  s|<axis>(?:(?!</axis>).)*?</axis>|$blk|gs' model.sdf
 
 # --------- AXIS 2: insert a new axis2 block before </joint> (exact same style as you had) ----------
 perl -0777 -i -pe '
