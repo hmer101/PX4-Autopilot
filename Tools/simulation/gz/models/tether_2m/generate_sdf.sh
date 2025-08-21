@@ -3,14 +3,14 @@ set -euo pipefail
 
 # --------- Placeholders (your Python script replaces these later) ---------
 JOINT1_AXIS="0 1 0"
-JOINT1_DAMPING="0.0005"
-JOINT1_FRICTION="0"
+JOINT1_DAMPING="0.0025"
+JOINT1_FRICTION="0.0"
 JOINT1_SPRING_REFERENCE="-0.10833078115"
 JOINT1_SPRING_STIFFNESS="0"
 
 JOINT2_AXIS="0 0 1"
-JOINT2_DAMPING="0.0005"
-JOINT2_FRICTION="0"
+JOINT2_DAMPING="0.0025"
+JOINT2_FRICTION="0.0"
 JOINT2_SPRING_REFERENCE="0"
 JOINT2_SPRING_STIFFNESS="0"
 
@@ -18,13 +18,13 @@ JOINT2_SPRING_STIFFNESS="0"
 K="2"              # e.g. 2 → every 2nd joint
 OFFSET="1"    # e.g. 2 → start from joint 2 (so 2,4,6,…)
 
-JOINT1_K_DAMPING="0.0005"
-JOINT1_K_FRICTION="0"
+JOINT1_K_DAMPING="0.0025"
+JOINT1_K_FRICTION="0.0"
 JOINT1_K_SPRING_REFERENCE="-0.10833078115" #"-0.10833078115_ALT"
 JOINT1_K_SPRING_STIFFNESS="0"
 
-JOINT2_K_DAMPING="0.0005"
-JOINT2_K_FRICTION="0"
+JOINT2_K_DAMPING="0.0025"
+JOINT2_K_FRICTION="0.0"
 JOINT2_K_SPRING_REFERENCE="0" #"0_ALT"
 JOINT2_K_SPRING_STIFFNESS="0"
 
@@ -35,6 +35,9 @@ gz sdf -p model.urdf > model.sdf
 
 # --------- revolute -> universal (both quote styles) ----------
 sed -i 's/type='\''revolute'\''/type='\''universal'\''/g; s/type="revolute"/type="universal"/g' model.sdf
+
+# --------- Force SDF version to 1.10 ----------
+sed -i "s|<sdf version='1.11'>|<sdf version='1.10'>|" model.sdf
 
 # --------- AXIS 1: replace the ENTIRE <axis>...</axis> with a templated block ----------
 # This hits every original axis (before axis2 exists), so each joint gets a fresh Axis-1.

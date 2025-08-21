@@ -15,8 +15,8 @@
     <xacro:property name="elem_mass_ends" value="0.0001" />
 
     <!-- Joint properties -->
-    <xacro:property name="joint_friction" value="0" />
-    <xacro:property name="joint_damping" value="0.0005" />
+    <xacro:property name="joint_friction" value="0.0" />
+    <xacro:property name="joint_damping" value="0.0025" />
 
     <!-- Calculations -->
     <xacro:property name="elem_mass_main" value="${cable_mass/num_elements}" />
@@ -80,7 +80,7 @@
                 <parent link="element_${elem_num-1}"/>
                 <child link="element_${elem_num}"/>
 
-                <dynamics damping="0.0005" friction="0"/>
+                <dynamics damping="0.0025" friction="0.0"/>
             </joint>
 
         </xacro:if>
@@ -99,14 +99,14 @@
         <origin xyz="0.0001 0 0" rpy="0 ${ang_i/2} 0"/>
         <parent link="element_first"/>
         <child link="element_1"/>
-        <dynamics damping="0.0005" friction="0"/>
+        <dynamics damping="0.0025" friction="0.0"/>
     </joint>
     <joint name="joint_29_to_${num_elements+1}" type="continuous">
         <axis xyz="0. 1. 0."/>
         <origin xyz="${elem_length_main} 0 0" rpy="0 ${(pi-ang_e)/2} 0"/>
         <parent link="element_29"/>
         <child link="element_last"/>
-        <dynamics damping="0.0005" friction="0"/>
+        <dynamics damping="0.0025" friction="0.0"/>
     </joint>
 
 </robot>

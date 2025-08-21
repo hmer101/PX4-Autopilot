@@ -36,6 +36,9 @@ gz sdf -p model.urdf > model.sdf
 # --------- revolute -> universal (both quote styles) ----------
 sed -i 's/type='\''revolute'\''/type='\''universal'\''/g; s/type="revolute"/type="universal"/g' model.sdf
 
+# --------- Force SDF version to 1.10 ----------
+sed -i "s|<sdf version='1.11'>|<sdf version='1.10'>|" model.sdf
+
 # --------- AXIS 1: replace the ENTIRE <axis>...</axis> with a templated block ----------
 # This hits every original axis (before axis2 exists), so each joint gets a fresh Axis-1.
 perl -0777 -i -pe '
