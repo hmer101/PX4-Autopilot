@@ -24,7 +24,7 @@
       </visual>
     </link>
     <joint name='joint_0_to_1' type='universal'>
-      <pose relative_to='element_first'>0.0001 0 0 0 1.5166309362157635 0</pose>
+      <pose relative_to='element_first'>0.0001 0 0 0 1.5079644737231024 0</pose>
       <parent>element_first</parent>
       <child>element_1</child>
       
@@ -35,8 +35,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference> 0 </spring_reference>
           <spring_stiffness> 0 </spring_stiffness>
         </dynamics>
@@ -48,8 +48,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference> 0 </spring_reference>
           <spring_stiffness> 0 </spring_stiffness>
         </dynamics>
@@ -58,29 +58,29 @@
     <link name='element_1'>
       <pose relative_to='joint_0_to_1'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_1_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_1_to_2' type='universal'>
-      <pose relative_to='element_1'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_1'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_1</parent>
       <child>element_2</child>
       
@@ -91,8 +91,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -104,8 +104,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -114,29 +114,29 @@
     <link name='element_2'>
       <pose relative_to='joint_1_to_2'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_2_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_2_to_3' type='universal'>
-      <pose relative_to='element_2'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_2'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_2</parent>
       <child>element_3</child>
       
@@ -147,8 +147,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -160,8 +160,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -170,29 +170,29 @@
     <link name='element_3'>
       <pose relative_to='joint_2_to_3'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_3_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_3_to_4' type='universal'>
-      <pose relative_to='element_3'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_3'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_3</parent>
       <child>element_4</child>
       
@@ -203,8 +203,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -216,8 +216,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -226,29 +226,29 @@
     <link name='element_4'>
       <pose relative_to='joint_3_to_4'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_4_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_4_to_5' type='universal'>
-      <pose relative_to='element_4'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_4'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_4</parent>
       <child>element_5</child>
       
@@ -259,8 +259,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -272,8 +272,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -282,29 +282,29 @@
     <link name='element_5'>
       <pose relative_to='joint_4_to_5'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_5_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_5_to_6' type='universal'>
-      <pose relative_to='element_5'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_5'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_5</parent>
       <child>element_6</child>
       
@@ -315,8 +315,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -328,8 +328,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -338,29 +338,29 @@
     <link name='element_6'>
       <pose relative_to='joint_5_to_6'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_6_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_6_to_7' type='universal'>
-      <pose relative_to='element_6'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_6'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_6</parent>
       <child>element_7</child>
       
@@ -371,8 +371,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -384,8 +384,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -394,29 +394,29 @@
     <link name='element_7'>
       <pose relative_to='joint_6_to_7'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_7_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_7_to_8' type='universal'>
-      <pose relative_to='element_7'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_7'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_7</parent>
       <child>element_8</child>
       
@@ -427,8 +427,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -440,8 +440,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -450,29 +450,29 @@
     <link name='element_8'>
       <pose relative_to='joint_7_to_8'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_8_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_8_to_9' type='universal'>
-      <pose relative_to='element_8'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_8'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_8</parent>
       <child>element_9</child>
       
@@ -483,8 +483,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -496,8 +496,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -506,29 +506,29 @@
     <link name='element_9'>
       <pose relative_to='joint_8_to_9'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_9_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_9_to_10' type='universal'>
-      <pose relative_to='element_9'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_9'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_9</parent>
       <child>element_10</child>
       
@@ -539,8 +539,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -552,8 +552,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -562,29 +562,29 @@
     <link name='element_10'>
       <pose relative_to='joint_9_to_10'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_10_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_10_to_11' type='universal'>
-      <pose relative_to='element_10'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_10'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_10</parent>
       <child>element_11</child>
       
@@ -595,8 +595,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -608,8 +608,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -618,29 +618,29 @@
     <link name='element_11'>
       <pose relative_to='joint_10_to_11'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_11_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_11_to_12' type='universal'>
-      <pose relative_to='element_11'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_11'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_11</parent>
       <child>element_12</child>
       
@@ -651,8 +651,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -664,8 +664,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -674,29 +674,29 @@
     <link name='element_12'>
       <pose relative_to='joint_11_to_12'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_12_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_12_to_13' type='universal'>
-      <pose relative_to='element_12'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_12'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_12</parent>
       <child>element_13</child>
       
@@ -707,8 +707,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -720,8 +720,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -730,29 +730,29 @@
     <link name='element_13'>
       <pose relative_to='joint_12_to_13'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_13_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_13_to_14' type='universal'>
-      <pose relative_to='element_13'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_13'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_13</parent>
       <child>element_14</child>
       
@@ -763,8 +763,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -776,8 +776,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -786,29 +786,29 @@
     <link name='element_14'>
       <pose relative_to='joint_13_to_14'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_14_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_14_to_15' type='universal'>
-      <pose relative_to='element_14'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_14'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_14</parent>
       <child>element_15</child>
       
@@ -819,8 +819,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -832,8 +832,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -842,29 +842,29 @@
     <link name='element_15'>
       <pose relative_to='joint_14_to_15'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_15_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_15_to_16' type='universal'>
-      <pose relative_to='element_15'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_15'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_15</parent>
       <child>element_16</child>
       
@@ -875,8 +875,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -888,8 +888,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -898,29 +898,29 @@
     <link name='element_16'>
       <pose relative_to='joint_15_to_16'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_16_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_16_to_17' type='universal'>
-      <pose relative_to='element_16'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_16'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_16</parent>
       <child>element_17</child>
       
@@ -931,8 +931,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -944,8 +944,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -954,29 +954,29 @@
     <link name='element_17'>
       <pose relative_to='joint_16_to_17'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_17_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_17_to_18' type='universal'>
-      <pose relative_to='element_17'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_17'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_17</parent>
       <child>element_18</child>
       
@@ -987,8 +987,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1000,8 +1000,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1010,29 +1010,29 @@
     <link name='element_18'>
       <pose relative_to='joint_17_to_18'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_18_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_18_to_19' type='universal'>
-      <pose relative_to='element_18'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_18'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_18</parent>
       <child>element_19</child>
       
@@ -1043,8 +1043,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1056,8 +1056,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1066,29 +1066,29 @@
     <link name='element_19'>
       <pose relative_to='joint_18_to_19'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_19_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_19_to_20' type='universal'>
-      <pose relative_to='element_19'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_19'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_19</parent>
       <child>element_20</child>
       
@@ -1099,8 +1099,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1112,8 +1112,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1122,29 +1122,29 @@
     <link name='element_20'>
       <pose relative_to='joint_19_to_20'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_20_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_20_to_21' type='universal'>
-      <pose relative_to='element_20'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_20'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_20</parent>
       <child>element_21</child>
       
@@ -1155,8 +1155,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1168,8 +1168,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1178,29 +1178,29 @@
     <link name='element_21'>
       <pose relative_to='joint_20_to_21'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_21_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_21_to_22' type='universal'>
-      <pose relative_to='element_21'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_21'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_21</parent>
       <child>element_22</child>
       
@@ -1211,8 +1211,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1224,8 +1224,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1234,29 +1234,29 @@
     <link name='element_22'>
       <pose relative_to='joint_21_to_22'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_22_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_22_to_23' type='universal'>
-      <pose relative_to='element_22'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_22'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_22</parent>
       <child>element_23</child>
       
@@ -1267,8 +1267,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1280,8 +1280,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1290,29 +1290,29 @@
     <link name='element_23'>
       <pose relative_to='joint_22_to_23'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_23_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_23_to_24' type='universal'>
-      <pose relative_to='element_23'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_23'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_23</parent>
       <child>element_24</child>
       
@@ -1323,8 +1323,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1336,8 +1336,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1346,29 +1346,29 @@
     <link name='element_24'>
       <pose relative_to='joint_23_to_24'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_24_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_24_to_25' type='universal'>
-      <pose relative_to='element_24'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_24'>0.096839999999999996 0 0 0 -0.12566370614359168 0</pose>
       <parent>element_24</parent>
       <child>element_25</child>
       
@@ -1379,8 +1379,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>-0.10833078115</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1392,8 +1392,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -1402,254 +1402,30 @@
     <link name='element_25'>
       <pose relative_to='joint_24_to_25'>0 0 0 0 0 0</pose>
       <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
+        <mass>0.00080000000000000004</mass>
         <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
+          <ixx>6.2712103999999998e-07</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
+          <iyy>6.2712103999999998e-07</iyy>
           <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
+          <izz>3.8440000000000004e-09</izz>
         </inertia>
       </inertial>
       <visual name='element_25_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
+        <pose>0.048419999999999998 0 0 0 1.5707963267948966 0</pose>
         <geometry>
           <cylinder>
-            <length>0.083482758620689643</length>
+            <length>0.096839999999999996</length>
             <radius>0.0030999999999999999</radius>
           </cylinder>
         </geometry>
       </visual>
     </link>
     <joint name='joint_25_to_26' type='universal'>
-      <pose relative_to='element_25'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
+      <pose relative_to='element_25'>0.096839999999999996 0 0 0 1.5079644737231024 0</pose>
       <parent>element_25</parent>
-      <child>element_26</child>
-      
-      <axis>
-        <xyz>0 1 0</xyz>
-        <limit>
-          <lower>-inf</lower>
-          <upper>inf</upper>
-        </limit>
-        <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
-          <spring_reference>-0.10833078115</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-    </axis>
-      <axis2>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <lower>-inf</lower>
-          <upper>inf</upper>
-        </limit>
-        <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-      </axis2>
-    </joint>
-    <link name='element_26'>
-      <pose relative_to='joint_25_to_26'>0 0 0 0 0 0</pose>
-      <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
-        <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
-          <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
-        </inertia>
-      </inertial>
-      <visual name='element_26_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <geometry>
-          <cylinder>
-            <length>0.083482758620689643</length>
-            <radius>0.0030999999999999999</radius>
-          </cylinder>
-        </geometry>
-      </visual>
-    </link>
-    <joint name='joint_26_to_27' type='universal'>
-      <pose relative_to='element_26'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
-      <parent>element_26</parent>
-      <child>element_27</child>
-      
-      <axis>
-        <xyz>0 1 0</xyz>
-        <limit>
-          <lower>-inf</lower>
-          <upper>inf</upper>
-        </limit>
-        <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
-          <spring_reference>-0.10833078115</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-    </axis>
-      <axis2>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <lower>-inf</lower>
-          <upper>inf</upper>
-        </limit>
-        <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-      </axis2>
-    </joint>
-    <link name='element_27'>
-      <pose relative_to='joint_26_to_27'>0 0 0 0 0 0</pose>
-      <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
-        <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
-          <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
-        </inertia>
-      </inertial>
-      <visual name='element_27_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <geometry>
-          <cylinder>
-            <length>0.083482758620689643</length>
-            <radius>0.0030999999999999999</radius>
-          </cylinder>
-        </geometry>
-      </visual>
-    </link>
-    <joint name='joint_27_to_28' type='universal'>
-      <pose relative_to='element_27'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
-      <parent>element_27</parent>
-      <child>element_28</child>
-      
-      <axis>
-        <xyz>0 1 0</xyz>
-        <limit>
-          <lower>-inf</lower>
-          <upper>inf</upper>
-        </limit>
-        <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
-          <spring_reference>-0.10833078115</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-    </axis>
-      <axis2>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <lower>-inf</lower>
-          <upper>inf</upper>
-        </limit>
-        <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-      </axis2>
-    </joint>
-    <link name='element_28'>
-      <pose relative_to='joint_27_to_28'>0 0 0 0 0 0</pose>
-      <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
-        <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
-          <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
-        </inertia>
-      </inertial>
-      <visual name='element_28_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <geometry>
-          <cylinder>
-            <length>0.083482758620689643</length>
-            <radius>0.0030999999999999999</radius>
-          </cylinder>
-        </geometry>
-      </visual>
-    </link>
-    <joint name='joint_28_to_29' type='universal'>
-      <pose relative_to='element_28'>0.083482758620689643 0 0 0 -0.10833078115826872 0</pose>
-      <parent>element_28</parent>
-      <child>element_29</child>
-      
-      <axis>
-        <xyz>0 1 0</xyz>
-        <limit>
-          <lower>-inf</lower>
-          <upper>inf</upper>
-        </limit>
-        <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
-          <spring_reference>-0.10833078115</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-    </axis>
-      <axis2>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <lower>-inf</lower>
-          <upper>inf</upper>
-        </limit>
-        <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-      </axis2>
-    </joint>
-    <link name='element_29'>
-      <pose relative_to='joint_28_to_29'>0 0 0 0 0 0</pose>
-      <inertial>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <mass>0.00068965517241379316</mass>
-        <inertia>
-          <ixx>4.0219545901840982e-07</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>4.0219545901840982e-07</iyy>
-          <iyz>0</iyz>
-          <izz>3.3137931034482758e-09</izz>
-        </inertia>
-      </inertial>
-      <visual name='element_29_visual'>
-        <pose>0.041741379310344821 0 0 0 1.5707963267948966 0</pose>
-        <geometry>
-          <cylinder>
-            <length>0.083482758620689643</length>
-            <radius>0.0030999999999999999</radius>
-          </cylinder>
-        </geometry>
-      </visual>
-    </link>
-    <joint name='joint_29_to_30' type='universal'>
-      <pose relative_to='element_29'>0.083482758620689643 0 0 0 1.5166309362157635 0</pose>
-      <parent>element_29</parent>
       <child>element_last</child>
       
       <axis>
@@ -1659,8 +1435,8 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference> 0 </spring_reference>
           <spring_stiffness> 0 </spring_stiffness>
         </dynamics>
@@ -1672,15 +1448,15 @@
           <upper>inf</upper>
         </limit>
         <dynamics>
-          <damping>0.0025</damping>
-          <friction>0.0</friction>
+          <damping>0.002</damping>
+          <friction>0</friction>
           <spring_reference> 0 </spring_reference>
           <spring_stiffness> 0 </spring_stiffness>
         </dynamics>
       </axis2>
     </joint>
     <link name='element_last'>
-      <pose relative_to='joint_29_to_30'>0 0 0 0 0 0</pose>
+      <pose relative_to='joint_25_to_26'>0 0 0 0 0 0</pose>
       <inertial>
         <pose>5.0000000000000002e-05 0 0 0 1.5707963267948966 0</pose>
         <mass>0.0001</mass>
