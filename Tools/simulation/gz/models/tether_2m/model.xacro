@@ -10,7 +10,7 @@
     <xacro:property name="cable_radius" value="0.0031" />
     <xacro:property name="cable_mass" value="0.02" />
     <xacro:property name="cable_length" value="2.421" />
-    <xacro:property name="num_elements" value="25" />
+    <xacro:property name="num_elements" value="15" />
     <xacro:property name="elem_length_ends" value="0.0001" />
     <xacro:property name="elem_mass_ends" value="0.0001" />
 
@@ -88,7 +88,7 @@
     </xacro:macro>
 
     <!-- Call recursive loop to generate cable -->
-    <xacro:generate_cable elem_num="25" />
+    <xacro:generate_cable elem_num="15" />
 
     <!-- Add start and end elements and joints-->
     <xacro:cable_element elem_name="element_first" elem_length="0.0001" elem_mass="0.0001" />
@@ -101,10 +101,10 @@
         <child link="element_1"/>
         <dynamics damping="0.002" friction="0"/>
     </joint>
-    <joint name="joint_25_to_${num_elements+1}" type="continuous">
+    <joint name="joint_15_to_${num_elements+1}" type="continuous">
         <axis xyz="0. 1. 0."/>
         <origin xyz="${elem_length_main} 0 0" rpy="0 ${(pi-ang_e)/2} 0"/>
-        <parent link="element_25"/>
+        <parent link="element_15"/>
         <child link="element_last"/>
         <dynamics damping="0.002" friction="0"/>
     </joint>

@@ -9,9 +9,12 @@
           <mass>1.66</mass>
           <inertia>
             <ixx>0.01019555</ixx>
+            <!-- <ixy>0</ixy> -->
             <ixy>0.00032783</ixy>
+            <!-- <ixz>0</ixz> -->
             <ixz>-0.00010803</ixz>
             <iyy>0.01374997</iyy>
+            <!-- <iyz>0</iyz> -->
             <iyz>-0.00032146</iyz>
             <izz>0.02099692</izz>
           </inertia>
