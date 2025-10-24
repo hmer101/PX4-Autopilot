@@ -308,7 +308,7 @@
                 </xacro:if> -->
     <parent link="element_1"/>
     <child link="element_2"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <joint name="joint_2_to_3" type="continuous">
     <axis xyz="0. 1. 0."/>
@@ -325,7 +325,7 @@
                 </xacro:if> -->
     <parent link="element_2"/>
     <child link="element_3"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <joint name="joint_3_to_4" type="continuous">
     <axis xyz="0. 1. 0."/>
@@ -342,7 +342,7 @@
                 </xacro:if> -->
     <parent link="element_3"/>
     <child link="element_4"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <joint name="joint_4_to_5" type="continuous">
     <axis xyz="0. 1. 0."/>
@@ -359,7 +359,7 @@
                 </xacro:if> -->
     <parent link="element_4"/>
     <child link="element_5"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <joint name="joint_5_to_6" type="continuous">
     <axis xyz="0. 1. 0."/>
@@ -376,7 +376,7 @@
                 </xacro:if> -->
     <parent link="element_5"/>
     <child link="element_6"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <joint name="joint_6_to_7" type="continuous">
     <axis xyz="0. 1. 0."/>
@@ -393,7 +393,7 @@
                 </xacro:if> -->
     <parent link="element_6"/>
     <child link="element_7"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <joint name="joint_7_to_8" type="continuous">
     <axis xyz="0. 1. 0."/>
@@ -410,7 +410,7 @@
                 </xacro:if> -->
     <parent link="element_7"/>
     <child link="element_8"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <joint name="joint_8_to_9" type="continuous">
     <axis xyz="0. 1. 0."/>
@@ -427,7 +427,7 @@
                 </xacro:if> -->
     <parent link="element_8"/>
     <child link="element_9"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <joint name="joint_9_to_10" type="continuous">
     <axis xyz="0. 1. 0."/>
@@ -444,7 +444,7 @@
                 </xacro:if> -->
     <parent link="element_9"/>
     <child link="element_10"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <joint name="joint_10_to_11" type="continuous">
     <axis xyz="0. 1. 0."/>
@@ -461,7 +461,7 @@
                 </xacro:if> -->
     <parent link="element_10"/>
     <child link="element_11"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <joint name="joint_11_to_12" type="continuous">
     <axis xyz="0. 1. 0."/>
@@ -478,7 +478,7 @@
                 </xacro:if> -->
     <parent link="element_11"/>
     <child link="element_12"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <joint name="joint_12_to_13" type="continuous">
     <axis xyz="0. 1. 0."/>
@@ -495,7 +495,7 @@
                 </xacro:if> -->
     <parent link="element_12"/>
     <child link="element_13"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <joint name="joint_13_to_14" type="continuous">
     <axis xyz="0. 1. 0."/>
@@ -512,7 +512,7 @@
                 </xacro:if> -->
     <parent link="element_13"/>
     <child link="element_14"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <joint name="joint_14_to_15" type="continuous">
     <axis xyz="0. 1. 0."/>
@@ -529,7 +529,7 @@
                 </xacro:if> -->
     <parent link="element_14"/>
     <child link="element_15"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <link name="element_first">
     <inertial>
@@ -574,13 +574,13 @@
     <origin rpy="0 1.4660765716752369 0" xyz="0.0001 0 0"/>
     <parent link="element_first"/>
     <child link="element_1"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
   <joint name="joint_15_to_16" type="continuous">
     <axis xyz="0. 1. 0."/>
     <origin rpy="0 1.4660765716752369 0" xyz="0.1614 0 0"/>
     <parent link="element_15"/>
     <child link="element_last"/>
-    <dynamics damping="0.002" friction="0"/>
+    <dynamics damping="0.01" friction="0"/>
   </joint>
 </robot>
