@@ -6,7 +6,8 @@
       <!-- <pose>0 0 0.03 0 0 3.141592654</pose> DOES NOTHING -->
       <link name='base_link'>
         <inertial>
-          <mass>1.66</mass>
+          <!-- <mass>1.66</mass> -->
+          <mass>0.6</mass>
           <inertia>
             <ixx>0.01019555</ixx>
             <!-- <ixy>0</ixy> -->
